@@ -76,6 +76,10 @@ body {
   border-bottom-width: 3px;
 }
 
+.button h3{
+font-family: 'Advent Pro', sans-serif;
+}
+
 .buttonselected{
   text-decoration: underline;
 }
@@ -86,6 +90,7 @@ body {
 
 .contenttext{
   color: #fff;
+  height: 100%;
 }
 
 /* a.effect-underline:after {

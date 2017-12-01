@@ -3,6 +3,7 @@ import Particles from '../../node_modules/react-particles-js/lib/particles';
 import DeveloperComponent from './developer';
 import CompanyComponent from './company';
 import FormComponent from './form';
+import InformationComponent from './information';
 
 /**
  * @author Bart Ziengs, 1-12-17
@@ -11,7 +12,7 @@ import FormComponent from './form';
  */
 
 class ParticleComponent extends Component {
-  
+
     /*
     *Baisc constructor with inhereted properties from component, state is used to keep 
     *track of what should be rendered, the functions PickDeveloper need to be binded explicitly in the
@@ -50,8 +51,11 @@ class ParticleComponent extends Component {
     handleAdditionalInfo = () => {
         if (this.state.showDeveloper) {
             return <div>
-            <FormComponent/>
-        </div>
+                <div className="contenttext">
+                    <InformationComponent />
+                </div>
+                <FormComponent />
+            </div>
         }
     }
 
@@ -82,32 +86,35 @@ class ParticleComponent extends Component {
                                     shadow: {
                                         enable: true,
                                         color: "#3CA9D1",
-                                        blur: 5
+                                        blur: 3
                                     }
                                 },
                                 shape: {
                                     type: "polygon",
                                     polygon: {
-                                        nb_slides: 4
+                                        nb_sides: 8
                                     }
                                 },
                                 number: {
-                                    value: 60,
-                                    // density:{
-                                    //     enable: true,
-                                    //     value_area: 5
-                                    // }
+                                    value: 35,
+                                    density: {
+                                        enable: true,
+                                        value_area: 1000
+                                    }
                                 },
                                 color: {
                                     value: "random"
                                 },
                                 move: {
                                     enable: true,
-                                    speed: 2,
+                                    speed: 6,
                                     distance: 250,
                                     direction: "none",
                                     random: false,
                                     out_mode: "out"
+                                },
+                                size: {
+                                    value: 5
                                 }
                             },
                             interactivity: {
@@ -133,7 +140,7 @@ class ParticleComponent extends Component {
                     </div>
                 </div>
                 {this.handleAdditionalInfo()}
-                </div>
+            </div>
         );
     }
 }
