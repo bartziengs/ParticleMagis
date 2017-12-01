@@ -1,9 +1,16 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
-  background-color: #505050;
-  
+  font-family: sans-serif;  
+}
+
+section{
+  padding: 20px 0px;
+  background-color: rgb(73, 84, 105)
+}
+
+#info{
+  background-color: #E8E8E8
 }
 
 #particles {
@@ -93,6 +100,26 @@ font-family: 'Advent Pro', sans-serif;
   height: 100%;
 }
 
+.infotext{
+  color:#000;
+  font-family: Roboto, 'sans-serif';
+}
+
+#info h2{
+  color: #000;
+}
+
+@media screen and (min-width: 992px) {
+  .infotext{
+    padding-top: 3em;
+    font-size: 18px;
+  }
+
+  .funnelinfo{
+    padding-top: 8em;
+  }
+}
+
 /* a.effect-underline:after {
 	content: '';
   position: absolute;
@@ -131,4 +158,8 @@ a.effect-underline:hover:after {
 
 #form{
   height: 100%;
+}
+
+.nopaddingleft{
+  padding-left: 0px;
 }
