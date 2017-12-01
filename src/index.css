@@ -163,3 +163,20 @@ a.effect-underline:hover:after {
 .nopaddingleft{
   padding-left: 0px;
 }
+
+#steps{
+    background: #1b147a;
+    background: -moz-linear-gradient(-45deg, #1b147a 1%, #01396e 17%, #0d1f4d 100%);
+    background: -webkit-linear-gradient(-45deg, #1b147a 1%,#01396e 17%,#0d1f4d 100%);
+    background: linear-gradient(135deg, #1b147a 1%,#01396e 17%,#0d1f4d 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1b147a', endColorstr='#0d1f4d',GradientType=1 );
+}
+
+#steps p{
+  color: #fff;
+}
+
+#steps span{
+  font-size: 500%;
+  color: #fff;
+}

@@ -51,7 +51,7 @@ class ParticleComponent extends Component {
                                     out_mode: "out"
                                 },
                                 size: {
-                                    value: 5
+                                    value: 7
                                 }
                             },
                             interactivity: {
@@ -60,6 +60,9 @@ class ParticleComponent extends Component {
                                     onhover: {
                                         enable: true,
                                         mode: ["repulse"]
+                                    },
+                                    onlick: {
+                                        enable: true
                                     }
                                 }
                             }

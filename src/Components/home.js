@@ -4,6 +4,7 @@ import CompanyComponent from './company';
 import FormComponent from './form';
 import InformationComponent from './information';
 import ParticleComponent from './particle';
+import StepsComponent from './steps';
 
 /**
  * @author Bart Ziengs, 1-12-17
@@ -54,7 +55,12 @@ class HomeComponent extends Component {
                 <div className="contenttext">
                     <InformationComponent />
                 </div>
+                <div>
+                {<StepsComponent/>}
+                </div>
+                <div>
                 <FormComponent />
+                </div>
             </div>
         }
     }
