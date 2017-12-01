@@ -1,0 +1,123 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background-color: #505050;
+  
+}
+
+#particles {
+  z-index: -1;
+}
+
+.magisco-text{
+  top:50%;
+  color:white;
+  z-index: 1;
+}
+
+.particles{
+  height: 100%;
+}
+
+#particles canvas{
+  position: absolute;
+  /* background-color: #0d134d; */
+  z-index: -1;
+  display: block;
+}
+
+#particles canvas{
+  background: #1b147a;
+  background: -moz-linear-gradient(-45deg, #1b147a 1%, #01396e 17%, #0d1f4d 100%);
+  background: -webkit-linear-gradient(-45deg, #1b147a 1%,#01396e 17%,#0d1f4d 100%);
+  background: linear-gradient(135deg, #1b147a 1%,#01396e 17%,#0d1f4d 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1b147a', endColorstr='#0d1f4d',GradientType=1 );
+}
+
+.jumbotron {
+  background-color: transparent;
+  height: 100%;
+  padding-top: 15%;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+  /* border: 1px solid #fff; */
+}
+
+.jumbotron h1,h2 {
+  text-align: center;
+  color: #fff;
+  font-family: 'Advent Pro', sans-serif;
+}
+
+.button{
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    color: #fff;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+    padding: 0px 20px 0px 20px;
+}
+
+.button:hover{
+  text-decoration: underline;
+  color: #fff;
+}
+
+.button a{
+  border-bottom-width: 3px;
+}
+
+.buttonselected{
+  text-decoration: underline;
+}
+
+.knoppen{
+  padding: 5em 20px 0 0;
+}
+
+.contenttext{
+  color: #fff;
+}
+
+/* a.effect-underline:after {
+	content: '';
+  position: absolute;
+  left: 0;
+  display: inline-block;
+  height: 1em;
+  width: 100%;
+  border-bottom: 1px solid;
+  margin-top: 10px;
+  opacity: 0;
+	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s;
+	-webkit-transform: scale(0,1);
+  transform: scale(0,1);
+  
+}
+
+a.effect-underline:hover:after {
+  opacity: 1;
+	-webkit-transform: scale(1);
+	transform: scale(1);
+} */
+
+.contenttext li{
+  margin:auto;
+  list-style-position: inside;
+}
+
+.box{
+  font-family: 'Advent Pro', sans-serif;
+}
+
+.box li{
+  font-family: 'Roboto', sans-serif;
+}
+
+#form{
+  height: 100%;
+}
