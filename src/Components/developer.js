@@ -1,5 +1,10 @@
 import React, { Component } from 'react';
 
+/**
+ * @author Bart Ziengs 1-12
+ * DeveloperComponent for rendering information and steps
+ */
+
 class DeveloperComponent extends Component {
   render() {
     return (

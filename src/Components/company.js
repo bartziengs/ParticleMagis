@@ -1,5 +1,10 @@
 import React, { Component } from 'react';
 
+/**
+ * @author Bart Ziengs 1-12
+ * CompanyComponent for rendering information and steps
+ */
+
 class CompanyComponent extends Component {
   render() {
     return (

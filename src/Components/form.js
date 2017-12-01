@@ -1,5 +1,11 @@
 import React, { Component } from 'react';
 
+/**
+ * @author Millen van Osch
+ * Contact form in jsx sytanx
+ */
+
+
 class FormComponent extends Component {
     
   render = () => {
