@@ -10,7 +10,7 @@ class CompanyComponent extends Component {
     return (
       <div className="container contenttext col-lg-12 text-center">
         <h3>Are you from a company? Let Maggy care about you </h3>
-        <p>It will not take long before we are looking for companies who want to hire the best developers, untill now stay tuned!</p>
+        <p>It will not take long before we are looking for companies who want to hire the best developers, untill then, stay tuned!</p>
     </div>  
     );
   }
