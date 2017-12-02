@@ -29,14 +29,14 @@ class ParticleComponent extends Component {
                                 shape: {
                                     type: "polygon",
                                     polygon: {
-                                        nb_sides: 8
+                                        nb_sides: 6
                                     }
                                 },
                                 number: {
                                     value: 35,
                                     density: {
                                         enable: true,
-                                        value_area: 1000
+                                        value_area: 1500
                                     }
                                 },
                                 color: {
@@ -59,10 +59,11 @@ class ParticleComponent extends Component {
                                 events: {
                                     onhover: {
                                         enable: true,
-                                        mode: ["repulse"]
+                                        mode: ["repulse","push"]
                                     },
                                     onlick: {
-                                        enable: true
+                                        enable: true,
+                                        mode: "push"
                                     }
                                 }
                             }
