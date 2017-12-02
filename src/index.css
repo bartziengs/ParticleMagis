@@ -95,6 +95,12 @@ font-family: 'Advent Pro', sans-serif;
   padding: 5em 20px 0 0;
 }
 
+@media screen and (max-width: 992px) {
+ .knoppen{
+    padding-top: 5px;
+  }
+}
+
 .contenttext{
   color: #fff;
   height: 100%;

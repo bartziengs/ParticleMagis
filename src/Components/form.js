@@ -27,7 +27,7 @@ class FormComponent extends Component {
                       <input className="form-control" placeholder="Enter last name here.." type="text" />
                     </div>
                   </div>
-                  <div className="row">
+                  {/* <div className="row">
                     <div className="col-sm-4 form-group">
                       <label>City</label>
                       <input className="form-control" placeholder="Enter city name here.." type="text" />
@@ -44,7 +44,7 @@ class FormComponent extends Component {
                   <div className="form-group">
                     <label>Phone Number</label>
                     <input className="form-control" placeholder="Enter phone number here.." type="text" />
-                  </div>
+                  </div> */}
                   <div className="form-group">
                     <label>Email Address</label>
                     <input className="form-control" placeholder="Enter email address Here.." type="text" />
