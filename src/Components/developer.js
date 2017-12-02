@@ -8,15 +8,11 @@ import React, { Component } from 'react';
 class DeveloperComponent extends Component {
   render() {
     return (
-    <div className="container contenttext col-lg-12 text-center">
+    <div className="container contenttext col-lg-8 col-lg-offset-2 text-center">
         <h3>Are you a developer? Let Maggy care about you </h3>
-        <ol>
-          <li>Sign up on the platform and Maggy will drive away the recruiters</li>
-          <li>Discuss with Maggy your salary and skills you want to work with</li>
-          <li>Maggy screens your desired company culture and talents within 5 minutes</li>
-          <li>Maggy is looking only for fitting companies who can apply to you</li>
-        </ol>
-    </div>   
+        <h1>Choose a company that fits your personality!</h1>
+        <h3>Frustrated by all traditional recruitment processes? According to your preferences, LinqU will offer you a top-10 list of the best fitting companies. Scroll down quicly to see what's in store for you!</h3>
+    </div>
     );
   }
 }

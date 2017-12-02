@@ -56,10 +56,10 @@ class HomeComponent extends Component {
                     <InformationComponent />
                 </div>
                 <div>
-                {<StepsComponent/>}
+                    <StepsComponent />
                 </div>
                 <div>
-                <FormComponent />
+                    <FormComponent />
                 </div>
             </div>
         }

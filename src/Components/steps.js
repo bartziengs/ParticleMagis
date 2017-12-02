@@ -10,7 +10,7 @@ class StepsComponent extends Component {
         return (
             <section id="steps">
                 <div className="container">
-                    <div className="row infotext">
+                    <div className="row infotext stepsinfotext">
                         <div className="col-lg-3 col-md-6 col-xs-12 text-center">
                         <span>&#9312;</span>
                         <p className="col-xs-12">Sign up on the platform and Maggy will drive away the recruiters</p>
