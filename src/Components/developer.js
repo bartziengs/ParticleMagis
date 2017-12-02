@@ -11,7 +11,7 @@ class DeveloperComponent extends Component {
     <div className="container contenttext col-lg-8 col-lg-offset-2 text-center">
         <h3>Are you a developer? Let Maggy care about you </h3>
         <h1>Choose a company that fits your personality!</h1>
-        <h3>Frustrated by all traditional recruitment processes? According to your preferences, LinqU will offer you a top-10 list of the best fitting companies. Scroll down quicly to see what's in store for you!</h3>
+        <h3>Frustrated by all traditional recruitment processes? According to your preferences, Magisco will offer you a top-10 list of the best fitting companies. Scroll down quicly to see what's in store for you!</h3>
     </div>
     );
   }
