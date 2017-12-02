@@ -165,6 +165,9 @@ a.effect-underline:hover:after {
 #form{
   height: 100%;
 }
+.form-control{
+    resize:none;
+}
 
 .nopaddingleft{
   padding-left: 0px;

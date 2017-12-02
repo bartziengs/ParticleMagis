@@ -5,6 +5,7 @@ import FormComponent from './form';
 import InformationComponent from './information';
 import ParticleComponent from './particle';
 import StepsComponent from './steps';
+import contact from '../Pug/contact.pug';
 
 /**
  * @author Bart Ziengs, 1-12-17

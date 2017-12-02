@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import nodemailer from 'nodemailer';
 
 /**
  * @author Millen van Osch
@@ -7,24 +8,54 @@ import React, { Component } from 'react';
 
 
 class FormComponent extends Component {
+  constructor(props){
+    super(props);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  handleSubmit(event){
+    event.preventDefault();
+    console.log("sendin data");
+    var formData = {
+        name: document.getElementsByName("name")[0].value,
+        email: document.getElementsByName("email")[0].value,
+        subject: document.getElementsByName("subject")[0].value,
+        message: document.getElementsByName("message")[0].value
+    };
+    let transporter = nodemailer.createTransport({
+        sendmail: true,
+        newline: 'unix',
+        path: '/usr/sbin/sendmail'
+    });
+    transporter.sendMail({
+        from: formData.email,
+        to: 'millen_vanosch@hotmail.com',
+        subject: formData.subject,
+        text: formData.message
+    }, (err, info) => {
+        console.log(info.envelope);
+        console.log(info.messageId);
+    });
+  }
+
 
   render = () => {
     return (
       <section id="form">
         <div className="container" id="Register">
-          <h1 className="well">Registration Form</h1>
+          <h1 className="well">Stay in contact with us!</h1>
           <div className="col-lg-12 well">
             <div className="row">
-              <form>
+              <form onSubmit={this.handleSubmit}>
                 <div className="col-sm-12">
                   <div className="row">
                     <div className="col-sm-6 form-group">
-                      <label>First Name</label>
-                      <input className="form-control" placeholder="Enter first name here.." type="text" />
+                      <label>Your Name</label>
+                      <input className="form-control" name="name" placeholder="Enter full name here.." type="text" />
                     </div>
                     <div className="col-sm-6 form-group">
-                      <label>Last Name</label>
-                      <input className="form-control" placeholder="Enter last name here.." type="text" />
+                      <label>Your Email</label>
+                      <input className="form-control" name="email" placeholder="Enter Email here.." type="text" data-rule-email="true" data-msg="Please enter a valid email" />
                     </div>
                   </div>
                   {/* <div className="row">
@@ -46,14 +77,14 @@ class FormComponent extends Component {
                     <input className="form-control" placeholder="Enter phone number here.." type="text" />
                   </div> */}
                   <div className="form-group">
-                    <label>Email Address</label>
-                    <input className="form-control" placeholder="Enter email address Here.." type="text" />
+                    <label>Subject</label>
+                    <input className="form-control" name="subject" placeholder="What is the subject?" type="text" />
                   </div>
                   <div className="form-group">
-                    <label>Website</label>
-                    <input className="form-control" placeholder="Enter website url Here.." type="text" />
+                    <label>Message</label>
+                    <textarea className="form-control" name="message" placeholder="Leave a message for us here.." rows="8" data-rule-required="true" data-msg="Please leave a message for us" />
                   </div>
-                  <button className="btn btn-lg btn-info" type="button">Submit</button>
+                  <button className="btn btn-lg btn-info" type="submit">Submit</button>
                 </div>
               </form>
             </div>
