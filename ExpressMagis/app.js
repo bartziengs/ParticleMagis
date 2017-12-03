@@ -42,7 +42,7 @@ app.post('/send', function (req, res) {
             name: name,
             address: email
         },
-        to: 'millen_vanosch@hotmail.com',
+        to: 'info@magisco.nl',
         subject: subject,
         text: message
     }, (err, info) => {
