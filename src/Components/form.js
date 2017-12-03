@@ -12,7 +12,7 @@ class FormComponent extends Component {
     return (
       <section id="form">
         <div className="container" id="Register">
-          <h1 className="well">Registration Form</h1>
+          <h1 className="well">Interested? Let Maggy help you! </h1>
           <div className="col-lg-12 well">
             <div className="row">
               <form>
