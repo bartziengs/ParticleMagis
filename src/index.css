@@ -57,6 +57,13 @@ section{
   }
 }
 
+@media screen and (max-width: 992px) and (orientation: landscape) {
+  .jumbotron{
+    padding-top: 15%;
+  }
+}
+
+
 @media screen and (max-width: 640px) {
   .button h3{
     font-size: 16px;
