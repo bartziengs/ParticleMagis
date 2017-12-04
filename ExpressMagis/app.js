@@ -20,10 +20,15 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, '/client/build')));
 
 app.use('/', index);
 app.use('/users', users);
+
+
+app.get('/', function (req, res) {
+    res.sendFile(path.join(__dirname, 'build', 'index.html'));
+});
 
 var transporter = nodemailer.createTransport({
     host: 'smtp.hostnet.nl',
@@ -50,9 +55,9 @@ app.post('/send', function (req, res) {
             console.log(err);
             console.log('oops');
             return res.json({success: false});
-        }
+        } else return res.json({success: true});
     });
-    return res.json({success: true});
+
 });
 
 // catch 404 and forward to error handler
