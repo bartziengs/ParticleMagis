@@ -33,10 +33,10 @@ class ParticleComponent extends Component {
                                     }
                                 },
                                 number: {
-                                    value: 35,
+                                    value: 45,
                                     density: {
                                         enable: true,
-                                        value_area: 1500
+                                        value_area: 3000
                                     }
                                 },
                                 color: {
