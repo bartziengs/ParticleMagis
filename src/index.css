@@ -57,6 +57,12 @@ section{
   }
 }
 
+@media screen and (max-width: 640px) {
+  .button h3{
+    font-size: 16px;
+  }
+}
+
 .jumbotron h1,h2 {
   text-align: center;
   color: #fff;

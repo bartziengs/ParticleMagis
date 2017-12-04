@@ -18,7 +18,7 @@ class InformationComponent extends Component {
                             <h2>What do I do?</h2>
                             <p>Hello, nice to meet you, my name is Maggy and I will explain to you what we're up to at Magisco</p>
                             <h2>Thorough screening</h2>
-                            <p>Our screening consists of several phases to ensure quality</p>
+                            <p>Our screening consists of several phases that are supported by a labor psychologist to ensure quality</p>
                         </div>
                     </div>
                 </div>

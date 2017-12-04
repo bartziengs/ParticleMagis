@@ -99,7 +99,7 @@ class FormComponent extends Component {
     return (
         <section id="form">
             <div className="container" id="Register">
-                <h1 className="well" style={{textAlign: 'center'}}>Get in touch with us!</h1>
+                <h1 className="well" style={{textAlign: 'center'}}>Interested? Let Maggy help you!</h1>
                 <div className="col-lg-12 well">
                     <div className="row">
                         <form onSubmit={this.handleSubmit}>

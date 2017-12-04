@@ -92,7 +92,7 @@ class HomeComponent extends Component {
                     </div>
                     <div className="jumbotron">
                         <div className="box">
-                            <h1>Hi! it's Maggy from Magisco</h1>
+                            <h1>Hi! it's Maggy from Magisco!</h1>
                             {this.handleRendering()}
                         </div>
                     </div>
