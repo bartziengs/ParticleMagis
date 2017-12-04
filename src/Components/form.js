@@ -107,7 +107,7 @@ class FormComponent extends Component {
                                 <div className="row">
                                     <div className="col-sm-6 form-group">
                                         <label>Your Name</label>
-                                        <input className="form-control" name="name" placeholder="Enter full name here.." type="text" minlength="4" required/>
+                                        <input className="form-control" name="name" placeholder="Enter full name here.." type="text" pattern=".{4,}" required/>
                                     </div>
                                     <div className="col-sm-6 form-group">
                                         <label>Your Email</label>
@@ -138,7 +138,7 @@ class FormComponent extends Component {
                                 </div>
                                 <div className="form-group">
                                     <label>Message</label>
-                                    <textarea className="form-control" name="message" placeholder="Leave a message for us here.." rows="8" minlength="8" required/>
+                                    <textarea className="form-control" name="message" placeholder="Leave a message for us here.." rows="8" pattern=".{8,}"required/>
                                 </div>
                                 <button className="btn btn-lg formbutton" type="submit">Submit</button>
                             </div>
