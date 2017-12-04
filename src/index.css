@@ -139,6 +139,18 @@ font-family: 'Advent Pro', sans-serif;
   }
 }
 
+@media screen and (min-width: 640px) {
+  .logo img{
+    max-width: 50%;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .logo img{
+    max-width: 90%;
+  }
+}
+
 /* a.effect-underline:after {
 	content: '';
   position: absolute;
@@ -218,3 +230,4 @@ a.effect-underline:hover:after {
     width: 0px;
     background: transparent; /* make scrollbar transparent */
 }
+

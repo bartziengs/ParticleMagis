@@ -87,6 +87,7 @@ class HomeComponent extends Component {
                 <div className="particles">
                     <ParticleComponent />
                     <div className="knoppen pull-right">
+                        <div className="logo col-lg-1 col-xs-4 col-md-3 pull-left"><img className="img img-responsive" src={require('../images/Maggy.png')}></img> </div>
                         <a className={!this.state.showDeveloper ? 'button pull-right buttonselected' : 'button pull-right'} onClick={this.pickCompany}><h3>Company</h3></a>
                         <a className={this.state.showDeveloper ? 'button pull-right buttonselected' : 'button pull-right'} onClick={this.pickDeveloper}><h3>Developer</h3></a>
                     </div>
