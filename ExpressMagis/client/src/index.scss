@@ -55,6 +55,21 @@ section{
   .jumbotron{
     padding-top: 30%;
   }
+  .button h3{
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 640px) {
+  .logo img{
+    max-width: 50%;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .logo img{
+    max-width: 90%;
+  }
 }
 
 .jumbotron h1,h2 {
@@ -117,7 +132,6 @@ font-family: 'Advent Pro', sans-serif;
 
 @media screen and (min-width: 992px) {
   .infotext{
-    padding-top: 3em;
     font-size: 18px;
   }
 
@@ -125,29 +139,6 @@ font-family: 'Advent Pro', sans-serif;
     padding-top: 8em;
   }
 }
-
-/* a.effect-underline:after {
-	content: '';
-  position: absolute;
-  left: 0;
-  display: inline-block;
-  height: 1em;
-  width: 100%;
-  border-bottom: 1px solid;
-  margin-top: 10px;
-  opacity: 0;
-	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
-	transition: opacity 0.35s, transform 0.35s;
-	-webkit-transform: scale(0,1);
-  transform: scale(0,1);
-  
-}
-
-a.effect-underline:hover:after {
-  opacity: 1;
-	-webkit-transform: scale(1);
-	transform: scale(1);
-} */
 
 .contenttext li{
   margin:auto;
@@ -257,5 +248,12 @@ $ani-delay: 1.5s;
   }
   100% {
     opacity: 0;
+  }
+}
+
+//landscape orientation
+@media screen and (max-width: 992px) and (orientation: landscape) {
+  .jumbotron{
+    padding-top: 15%;
   }
 }
