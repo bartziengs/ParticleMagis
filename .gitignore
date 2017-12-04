@@ -10,6 +10,7 @@
 
 # production
 /build
+/ExpressMagis/client/build
 
 # misc
 .DS_Store
