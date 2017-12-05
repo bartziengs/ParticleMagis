@@ -15,7 +15,7 @@ class FormSent extends Component {
             <section id="form">
                 <div className="container" id="Register">
                     <h1 className="well" style={{textAlign: 'center'}}>Thank you! We'll be in touch with you soon!</h1>
-                    <iframe width="0" height="0" border="0" name="dummyframe" id="dummyframe"></iframe>
+                    <iframe title="sentFrame" width="0" height="0" border="0" name="dummyframe" id="dummyframe"></iframe>
                 </div>
             </section>
         );
@@ -31,7 +31,7 @@ class FormFailed extends Component {
             <section id="form">
                 <div className="container" id="Register">
                     <h1 className="well" style={{textAlign: 'center'}}>Sorry something went wrong, please refresh and try again later</h1>
-                    <iframe width="0" height="0" border="0" name="dummyframe" id="dummyframe"></iframe>
+                    <iframe title="notSentFrame" width="0" height="0" border="0" name="dummyframe" id="dummyframe"></iframe>
                 </div>
             </section>
         );
@@ -133,7 +133,7 @@ class FormComponent extends Component {
                 <h1 className="well" style={{textAlign: 'center'}}>Interested? Let Maggy help you!</h1>
                 <div className="col-lg-12 well">
                     <div className="row">
-                        <iframe width="0" height="0" border="0" name="dummyframe" id="dummyframe"></iframe>
+                        <iframe title="formFrame" width="0" height="0" border="0" name="dummyframe" id="dummyframe"></iframe>
                         <form id="formform" action="/cgi-bin/sendmail.pl" method="POST"  onSubmit={this.SubmitHandle} >
                             <div className="col-sm-12">
                                 <div className="row">

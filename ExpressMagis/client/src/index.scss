@@ -60,10 +60,6 @@ section{
   }
 }
 
-.logo{
-  top:50%;
-}
-
 .logo img{
   margin-top:15px;
 }
@@ -77,6 +73,7 @@ section{
 @media screen and (min-width: 992px) {
   .logo img{
     max-width: 90%;
+    margin-top: 0px;
   }
 }
 
@@ -264,4 +261,9 @@ $ani-delay: 1.5s;
   .jumbotron{
     padding-top: 15%;
   }
+}
+
+iframe{
+  z-index: -2;
+  position: absolute;
 }
