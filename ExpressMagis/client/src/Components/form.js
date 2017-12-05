@@ -40,6 +40,7 @@ class FormComponent extends Component {
     super(props);
     this.handleRendering = this.handleRendering.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.SubmitHandle = this.SubmitHandle.bind(this);
     this.form = this.form.bind(this);
     this.state = {formSent: null};
   }
@@ -66,7 +67,7 @@ class FormComponent extends Component {
     event.preventDefault();
     console.log("sendin data");
 
-    fetch('/send', {
+    fetch('http://magisco.nl/cgi-bin/sendmail.pl', {
       method: 'POST',
       headers: {
           'Accept': 'application/json',
@@ -91,10 +92,13 @@ class FormComponent extends Component {
         this.setState({formSent: false})
     });
   }
-  SubmitHandle = () => {
+  SubmitHandle(event){
+      event.preventDefault();
       if(this.state.formSent === null) {
           this.setState({formSent: true})
       }
+      var form = document.getElementById('formform');
+      return true;
   }
   /**
    * the original form
@@ -107,7 +111,7 @@ class FormComponent extends Component {
                 <div className="col-lg-12 well">
                     <div className="row">
                         <iframe width="0" height="0" border="0" name="dummyframe" id="dummyframe"></iframe>
-                        <form action="/cgi-bin/sendmail.pl" method="POST" target="dummyframe" >
+                        <form id="formform" action="/cgi-bin/sendmail.pl" method="POST" target="dummyframe" >
                             <div className="col-sm-12">
                                 <div className="row">
                                     <div className="col-sm-6 form-group">
@@ -143,9 +147,9 @@ class FormComponent extends Component {
                                 </div>
                                 <div className="form-group">
                                     <label>Message</label>
-                                    <textarea className="form-control" name="message" placeholder="Leave a message for us here.." rows="8" pattern=".{8,}"required/>
+                                    <textarea className="form-control" name="message" placeholder="Leave a message for us here.." rows="8" required/>
                                 </div>
-                                <button className="btn btn-lg formbutton"  type="submit">Submit</button>
+                                <button className="btn btn-lg formbutton" type="submit">Submit</button>
                             </div>
                         </form>
                     </div>
