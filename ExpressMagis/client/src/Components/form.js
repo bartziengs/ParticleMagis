@@ -91,7 +91,11 @@ class FormComponent extends Component {
         this.setState({formSent: false})
     });
   }
-
+  SubmitHandle = () => {
+      if(this.state.formSent === null) {
+          this.setState({formSent: true})
+      }
+  }
   /**
    * the original form
    */
@@ -102,7 +106,8 @@ class FormComponent extends Component {
                 <h1 className="well" style={{textAlign: 'center'}}>Interested? Let Maggy help you!</h1>
                 <div className="col-lg-12 well">
                     <div className="row">
-                        <form onSubmit={this.handleSubmit}>
+                        <iframe width="0" height="0" border="0" name="dummyframe" id="dummyframe"></iframe>
+                        <form action="/cgi-bin/sendmail.pl" method="POST" target="dummyframe" >
                             <div className="col-sm-12">
                                 <div className="row">
                                     <div className="col-sm-6 form-group">
@@ -140,7 +145,7 @@ class FormComponent extends Component {
                                     <label>Message</label>
                                     <textarea className="form-control" name="message" placeholder="Leave a message for us here.." rows="8" pattern=".{8,}"required/>
                                 </div>
-                                <button className="btn btn-lg formbutton" type="submit">Submit</button>
+                                <button className="btn btn-lg formbutton"  type="submit">Submit</button>
                             </div>
                         </form>
                     </div>
