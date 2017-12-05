@@ -9,11 +9,8 @@ import Particles from '../../node_modules/react-particles-js/lib/particles';
 
 class ParticleComponent extends Component {
 
-    /**
-     * Renders the particleJs canvas-style (html property)
-     * all available settings can be found on https://github.com/VincentGarreau/particles.js/
-     */
     render() {
+        console.log("particles are rendered");
         return (
                  <Particles
                         params={{

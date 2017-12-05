@@ -42,6 +42,14 @@ section{
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1b147a', endColorstr='#0d1f4d',GradientType=1 );
 }
 
+.particles{
+  background: #1b147a;
+  background: -moz-linear-gradient(-45deg, #1b147a 1%, #01396e 17%, #0d1f4d 100%);
+  background: -webkit-linear-gradient(-45deg, #1b147a 1%,#01396e 17%,#0d1f4d 100%);
+  background: linear-gradient(135deg, #1b147a 1%,#01396e 17%,#0d1f4d 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1b147a', endColorstr='#0d1f4d',GradientType=1 );
+}
+
 .jumbotron {
   background-color: transparent;
   height: 100%;
@@ -264,4 +272,9 @@ $ani-delay: 1.5s;
   .jumbotron{
     padding-top: 15%;
   }
+}
+
+iframe{
+  position: absolute;
+  z-index: -1;
 }

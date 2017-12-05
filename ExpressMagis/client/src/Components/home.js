@@ -5,7 +5,6 @@ import FormComponent from './form';
 import InformationComponent from './information';
 import ParticleComponent from './particle';
 import StepsComponent from './steps';
-import contact from '../Pug/contact.pug';
 
 /**
  * @author Bart Ziengs, 1-12-17
@@ -54,8 +53,8 @@ class HomeComponent extends Component {
         if(this.state.showDeveloper) {
             return (
                 <div>
-                    <div class="arrow arrow-first"></div>
-                    <div class="arrow arrow-second"></div>
+                    <div className="arrow arrow-first"></div>
+                    <div className="arrow arrow-second"></div>
                 </div>
             );
         } else return(<div></div>)
@@ -98,9 +97,9 @@ class HomeComponent extends Component {
         return (
             <div>
                 <div className="particles">
-                    <ParticleComponent />
+                    {/* <ParticleComponent /> */}
                     <div className="knoppen pull-right">
-                        <div className="logo col-lg-1 col-xs-4 col-md-3 pull-left"><img className="img img-responsive" src={require('../images/Magisco logo-3/PNG/logo-white-transparent.png')}></img> </div>
+                        <div className="logo col-lg-1 col-xs-4 col-md-3 pull-left"><img alt="logo_website"className="img img-responsive" src={require('../images/Magisco logo-3/PNG/logo-white-transparent.png')}></img> </div>
                         <a className={!this.state.showDeveloper ? 'button pull-right buttonselected' : 'button pull-right'} onClick={this.pickCompany}><h3>Company</h3></a>
                         <a className={this.state.showDeveloper ? 'button pull-right buttonselected' : 'button pull-right'} onClick={this.pickDeveloper}><h3>Developer</h3></a>
                     </div>
