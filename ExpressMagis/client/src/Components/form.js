@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import $ from 'jquery';
 
 /**
  * @author Millen van Osch
@@ -14,6 +15,7 @@ class FormSent extends Component {
             <section id="form">
                 <div className="container" id="Register">
                     <h1 className="well" style={{textAlign: 'center'}}>Thank you! We'll be in touch with you soon!</h1>
+                    <iframe width="0" height="0" border="0" name="dummyframe" id="dummyframe"></iframe>
                 </div>
             </section>
         );
@@ -29,6 +31,7 @@ class FormFailed extends Component {
             <section id="form">
                 <div className="container" id="Register">
                     <h1 className="well" style={{textAlign: 'center'}}>Sorry something went wrong, please refresh and try again later</h1>
+                    <iframe width="0" height="0" border="0" name="dummyframe" id="dummyframe"></iframe>
                 </div>
             </section>
         );
@@ -92,14 +95,34 @@ class FormComponent extends Component {
         this.setState({formSent: false})
     });
   }
+
   SubmitHandle(event){
       event.preventDefault();
       if(this.state.formSent === null) {
           this.setState({formSent: true})
       }
-      var form = document.getElementById('formform');
+      var frm = document.getElementById('formform');
+      $("#formform").attr('target','dummyframe');
+      frm.submit(function(ev) {
+          ev.preventDefault();
+          $.ajax({
+              type: frm.attr('method'),
+              url: frm.attr('action'),
+              data: frm.serialize(),
+              target: 'dummyframe',
+              success: function (data) {
+                  console.log('Submission was successful.');
+                  console.log(data);
+              },
+              error: function (data) {
+                  console.log('An error occurred.');
+                  console.log(data);
+              },
+          });
+      })
       return true;
   }
+
   /**
    * the original form
    */
@@ -111,7 +134,7 @@ class FormComponent extends Component {
                 <div className="col-lg-12 well">
                     <div className="row">
                         <iframe width="0" height="0" border="0" name="dummyframe" id="dummyframe"></iframe>
-                        <form id="formform" action="/cgi-bin/sendmail.pl" method="POST" target="dummyframe" >
+                        <form id="formform" action="/cgi-bin/sendmail.pl" method="POST"  onSubmit={this.SubmitHandle} >
                             <div className="col-sm-12">
                                 <div className="row">
                                     <div className="col-sm-6 form-group">
