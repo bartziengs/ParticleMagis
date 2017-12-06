@@ -21,11 +21,11 @@ class StepsComponent extends Component {
                         </div>
                         <div className="col-lg-3 col-md-6 col-xs-12 text-center">
                         <span>&#9314;</span>
-                        <p className="col-xs-12">Maggy screens your desired company culture and talents within 5 minutes</p>
+                        <p className="col-xs-12">Maggy will screen your desired company culture and talents within 5 minutes</p>
                         </div>
                         <div className="col-lg-3 col-md-6 col-xs-12 text-center">
                         <span>&#9315;</span>
-                        <p className="col-xs-12">Maggy is looking only for fitting companies who can apply to you</p>
+                        <p className="col-xs-12">Maggy will only look for fitting companies who can apply to you</p>
                         </div>
                     </div>
                 </div>
