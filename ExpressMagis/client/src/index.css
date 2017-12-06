@@ -48,9 +48,6 @@ section {
   .button h3 {
     font-size: 16px; } }
 
-.logo {
-  top: 50%; }
-
 .logo img {
   margin-top: 15px; }
 
@@ -60,7 +57,8 @@ section {
 
 @media screen and (min-width: 992px) {
   .logo img {
-    max-width: 90%; } }
+    max-width: 90%;
+    margin-top: 0px; } }
 
 .jumbotron h1, h2 {
   text-align: center;
@@ -208,3 +206,7 @@ section {
 @media screen and (max-width: 992px) and (orientation: landscape) {
   .jumbotron {
     padding-top: 15%; } }
+
+iframe {
+  z-index: -2;
+  position: absolute; }

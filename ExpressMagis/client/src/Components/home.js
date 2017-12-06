@@ -13,7 +13,6 @@ import StepsComponent from './steps';
  */
 
 class HomeComponent extends Component {
-
     /*
     *Baisc constructor with inhereted properties from component, state is used to keep 
     *track of what should be rendered, the functions PickDeveloper need to be binded explicitly in the
@@ -24,7 +23,6 @@ class HomeComponent extends Component {
         this.state = {
             showDeveloper: true,
         }
-
         this.pickDeveloper = this.pickDeveloper.bind(this);
         this.pickCompany = this.pickCompany.bind(this);
     }
