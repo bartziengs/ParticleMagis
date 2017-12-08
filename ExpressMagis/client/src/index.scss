@@ -35,6 +35,7 @@ section{
 }
 
 #particles canvas{
+  height: 100vh !important;
   background: #1b147a;
   background: -moz-linear-gradient(-45deg, #1b147a 1%, #01396e 17%, #0d1f4d 100%);
   background: -webkit-linear-gradient(-45deg, #1b147a 1%,#01396e 17%,#0d1f4d 100%);
@@ -42,7 +43,7 @@ section{
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1b147a', endColorstr='#0d1f4d',GradientType=1 );
 }
 
-.jumbotron {
+.jumbotron {  
   background-color: transparent;
   height: 100%;
   padding-top: 20%;
@@ -266,4 +267,12 @@ $ani-delay: 1.5s;
 iframe{
   z-index: -2;
   position: absolute;
+}
+
+.embed-responsive iframe {
+ z-index: 0; 
+}
+
+.filmpje{
+  padding: 30px 15px 10px 15px;
 }
