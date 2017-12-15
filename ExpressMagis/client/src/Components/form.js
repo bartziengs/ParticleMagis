@@ -134,7 +134,7 @@ class FormComponent extends Component {
                 <div className="col-lg-12 well">
                     <div className="row">
                         <iframe title="formFrame" width="0" height="0" border="0" name="dummyframe" id="dummyframe"></iframe>
-                        <form id="formform" action="/cgi-bin/sendmail.pl" method="POST"  onSubmit={this.SubmitHandle} >
+                        <form id="formform" action="/cgi-bin/mailer.php" method="POST"  onSubmit={this.SubmitHandle} >
                             <div className="col-sm-12">
                                 <div className="row">
                                     <div className="col-sm-6 form-group">
