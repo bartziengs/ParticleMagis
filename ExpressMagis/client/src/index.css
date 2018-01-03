@@ -219,8 +219,6 @@ iframe {
   padding: 30px 15px 10px 15px; }
 
 .footer {
-  position: absolute;
-  bottom: 0;
   width: 100%;
   /* Set the fixed height of the footer here */
   height: 60px;

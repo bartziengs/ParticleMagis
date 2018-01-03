@@ -61,8 +61,9 @@ class HomeComponent extends Component {
      * renders forms and steps if and only if developer is selected
      */
     handleAdditionalInfo = () => {
-        if (this.state.showDeveloper) {
-            return <div>
+        return <div>
+        {this.state.showDeveloper &&
+            <div>
                 <div>
                     <div className="arrow arrow-first"></div>
                     <div className="arrow arrow-second"></div>
@@ -77,8 +78,10 @@ class HomeComponent extends Component {
                     <FormComponent />
                 </div>
             </div>
-        }
+        
+    }
         <FooterComponent />
+        </div>
     }
 
     /**
