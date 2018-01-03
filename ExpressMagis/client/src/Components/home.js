@@ -62,25 +62,25 @@ class HomeComponent extends Component {
      */
     handleAdditionalInfo = () => {
         return <div>
-        {this.state.showDeveloper &&
-            <div>
+            {this.state.showDeveloper &&
                 <div>
-                    <div className="arrow arrow-first"></div>
-                    <div className="arrow arrow-second"></div>
+                    <div>
+                        <div className="arrow arrow-first"></div>
+                        <div className="arrow arrow-second"></div>
+                    </div>
+                    <div className="contenttext">
+                        <InformationComponent />
+                    </div>
+                    <div>
+                        <StepsComponent />
+                    </div>
+                    <div>
+                        <FormComponent />
+                    </div>
                 </div>
-                <div className="contenttext">
-                    <InformationComponent />
-                </div>
-                <div>
-                    <StepsComponent />
-                </div>
-                <div>
-                    <FormComponent />
-                </div>
-            </div>
-        
-    }
-        <FooterComponent />
+
+            }
+            <FooterComponent />
         </div>
     }
 
