@@ -49,22 +49,23 @@ class HomeComponent extends Component {
      * only renders the arrows when you can scroll
      * @returns {*}
      */
-    handleArrows = () => {
-        if(this.state.showDeveloper) {
-            return (
-                <div>
-                    <div className="arrow arrow-first"></div>
-                    <div className="arrow arrow-second"></div>
-                </div>
-            );
-        } else return(<div></div>)
-    }
+    // handleArrows = () => {
+    //     if(this.state.showDeveloper) {
+    //         return (
+                
+    //         );
+    //     } 
+    // }
     /**
      * renders forms and steps if and only if developer is selected
      */
     handleAdditionalInfo = () => {
         if (this.state.showDeveloper) {
             return <div>
+                <div>
+                    <div className="arrow arrow-first"></div>
+                    <div className="arrow arrow-second"></div>
+                </div>
                 <div className="contenttext">
                     <InformationComponent />
                 </div>
@@ -109,7 +110,6 @@ class HomeComponent extends Component {
                             {this.handleRendering()}
                         </div>
                     </div>
-                    {this.handleArrows()}
                 </div>
                 {this.handleAdditionalInfo()}
             </div>
