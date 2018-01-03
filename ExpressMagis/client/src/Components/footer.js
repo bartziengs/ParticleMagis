@@ -13,7 +13,8 @@ class FooterComponent extends Component {
         super();
 
         this.state = {
-            modalIsOpen: false
+            modalIsOpen: false,
+            showPrivacy: false,
         }
 
         this.openModal = this.openModal.bind(this);
@@ -31,25 +32,38 @@ class FooterComponent extends Component {
 
     afterOpenModal = () => {
         this.subtitle.style.color = '#f00';
-      }
+    }
+
+    showPrivacy = () => {
+        this.setState({
+            showPrivacy: true,
+        })
+        this.openModal();
+    }
+
+    showTerms = () => {
+        this.setState({
+            showPrivacy: false
+        })
+        this.openModal();
+    }
 
     render = () => {
         return (
             <footer class="footer">
                 <div class="container">
                     <div class="footermodal">
-                        <button onClick={this.openModal}>Open Modal</button>
+                        <p className="col-xs-4 text-center"><span onClick={this.showPrivacy}>Privacy Policy</span></p>
+                        <p className="col-xs-4 text-center"><span onClick={this.showTerms}>Terms of Service</span></p>
+                        <p className="col-xs-4 text-center">kvk: 68904657</p>
                         <Modal
                             isOpen={this.state.modalIsOpen}
                             style={modalResources.customStyles}
                             onRequestClose={this.closeModal}
-                            contentLabel="Example Modal"
+                            contentLabel="footerModalPrivacyEnServices"
                         >
-
-                            {/* <h2 ref={subtitle => this.subtitle = subtitle}>Hello</h2> */}
-                            {/* <button onClick={this.closeModal}>close</button> */}
-                            <i class="fa fa-times" onClick={this.closeModal}></i>
-                            <div dangerouslySetInnerHTML={{__html : modalResources.privacyPolicy}}></div>
+                            <i class="fa fa-times pull-right" onClick={this.closeModal}></i>
+                            <div dangerouslySetInnerHTML={this.state.showPrivacy ? { __html: modalResources.privacyPolicy } : { __html: modalResources.termsOfService }}></div>
                         </Modal>
                     </div>
                 </div>

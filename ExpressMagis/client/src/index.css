@@ -223,6 +223,13 @@ iframe {
   /* Set the fixed height of the footer here */
   height: 60px;
   background-color: #f5f5f5; }
+  .footer span {
+    cursor: pointer; }
+  .footer p {
+    vertical-align: center;
+    font-weight: bold; }
+  .footer .footermodal {
+    margin-top: 10px; }
 
 .ReactModal__Body--open {
   overflow: hidden; }
