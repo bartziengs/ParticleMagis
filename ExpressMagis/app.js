@@ -26,10 +26,6 @@ app.use('/', index);
 app.use('/users', users);
 
 
-app.get('/', function (req, res) {
-    res.sendFile(path.join(__dirname, 'build', 'index.html'));
-});
-
 var transporter = nodemailer.createTransport({
     host: 'smtp.hostnet.nl',
     port: 587,
@@ -58,6 +54,10 @@ app.post('/send', function (req, res) {
         } else return res.json({success: true});
     });
 
+});
+
+app.get('*', function (req, res) {
+    res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
 
 // catch 404 and forward to error handler
