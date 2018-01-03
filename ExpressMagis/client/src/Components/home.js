@@ -5,6 +5,7 @@ import FormComponent from './form';
 import InformationComponent from './information';
 import ParticleComponent from './particle';
 import StepsComponent from './steps';
+import FooterComponent from './footer';
 
 /**
  * @author Bart Ziengs, 1-12-17
@@ -77,6 +78,7 @@ class HomeComponent extends Component {
                 </div>
             </div>
         }
+        <FooterComponent />
     }
 
     /**
