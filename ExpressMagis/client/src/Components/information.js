@@ -24,7 +24,15 @@ class InformationComponent extends Component {
                     <div className="row">
                         <div className="filmpje col-lg-12 col-md-12 col-sm-12 col-xs-12">
                             <div className="embed-responsive embed-responsive-16by9">
-                                <iframe title="magiscovideo" className="center-block" src="https://www.youtube.com/embed/xotjiEixYfk" />
+                                <video width="640" height="480" controls poster={require('../images/promo-poster.png')}>
+                                    <source src={require('../images/Magisco-promo.mp4')} type='video/mp4' />
+                                    <source src={require('../images/Magisco-promo.ogv')} type='video/ogg; codecs="theora, vorbis"' />
+                                    <object id="flowplayer" data="flowplayer-3.2.2.swf" type="application/x-shockwave-flash" width="640" height="480" >
+                                        <param name="movie" value="flowplayer-3.2.2.swf" />
+                                            <param name="allowfullscreen" value="true" />
+                                                <param name="flashvars" value="config={'clip':{'url':{require('../images/Magisco-promo.mp4')},'autoPlay':false}}" />
+                                    </object>
+                                </video>
                             </div>
                         </div>
                     </div>

@@ -55,7 +55,7 @@ class FooterComponent extends Component {
                     <div class="footermodal">
                         <p className="col-xs-4 text-center"><span onClick={this.showPrivacy}>Privacy Policy</span></p>
                         <p className="col-xs-4 text-center"><span onClick={this.showTerms}>Terms of Service</span></p>
-                        <p className="col-xs-4 text-center">kvk: 68904657</p>
+                        <p className="col-xs-4 text-center">Chamber of Commerce 68904657</p>
                         <Modal
                             isOpen={this.state.modalIsOpen}
                             style={modalResources.customStyles}
