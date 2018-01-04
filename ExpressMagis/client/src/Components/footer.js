@@ -18,7 +18,6 @@ class FooterComponent extends Component {
         }
 
         this.openModal = this.openModal.bind(this);
-        this.afterOpenModal = this.afterOpenModal.bind(this);
         this.closeModal = this.closeModal.bind(this);
     }
 
@@ -28,10 +27,6 @@ class FooterComponent extends Component {
 
     closeModal = () => {
         this.setState({ modalIsOpen: false });
-    }
-
-    afterOpenModal = () => {
-        this.subtitle.style.color = '#f00';
     }
 
     showPrivacy = () => {
