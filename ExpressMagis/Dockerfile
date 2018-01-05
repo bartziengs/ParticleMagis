@@ -9,13 +9,11 @@ COPY package.json package.json
 COPY package-lock.json package-lock.json
 RUN npm install
 
-WORKDIR /client
-COPY /client/package.json package.json
-COPY /client/package-lock.json package-lock.json
-RUN npm install
+COPY . .
 
-# copy all local files into the image.
-COPY /client .
+#install inside client
+WORKDIR /client
+RUN npm install
 
 # start app
 CMD ["npm", "start"]
