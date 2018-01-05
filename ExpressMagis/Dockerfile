@@ -1,19 +1,17 @@
 # base image
-FROM node:alpine
+FROM node:latest
 
 # open port 80
 EXPOSE 80
 
 # install packages
-COPY package.json package.json
-COPY package-lock.json package-lock.json
+COPY client/package.json package.json
 RUN npm install
 
-COPY . .
-
-#install inside client
-WORKDIR /client
-RUN npm install
+COPY /client .
 
 # start app
-CMD ["npm", "start"]
+ CMD ["npm", "start"]
+
+ #note, in order to connect to container run
+ # docker exec -it <name> bash
