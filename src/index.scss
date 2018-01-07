@@ -166,7 +166,13 @@ font-family: 'Advent Pro', sans-serif;
     resize:none;
 }
 .formbutton{
-    background: #6ebb24;
+    
+    &-dev {
+      background: #6ebb24;
+    }
+    &-comp {
+      background: red;
+    }
     // background: -moz-linear-gradient(-45deg, #1b147a 1%, #01396e 17%, #0d1f4d 100%);
     // background: -webkit-linear-gradient(-45deg, #1b147a 1%,#01396e 17%,#0d1f4d 100%);
     // background: linear-gradient(135deg, #1b147a 1%,#01396e 17%,#0d1f4d 100%);

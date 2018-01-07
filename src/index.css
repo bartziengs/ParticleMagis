@@ -130,9 +130,12 @@ section {
   resize: none; }
 
 .formbutton {
-  background: #6ebb24;
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1b147a', endColorstr='#0d1f4d',GradientType=1 );
   color: white; }
+  .formbutton-dev {
+    background: #6ebb24; }
+  .formbutton-comp {
+    background: red; }
 
 .nopaddingleft {
   padding-left: 0px; }
