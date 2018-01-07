@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ParticleComponent from './ParticleComponent';
 import TargetAudienceComponent from '../TargetAudience/TargetAudienceComponent';
+import FooterComponent from '../Footer/FooterComponent';
 
 /**
  * @author Bart Ziengs, 1-12-17
@@ -61,7 +62,7 @@ class HomeComponent extends Component {
                 <div className="particles">
                     <ParticleComponent />
                     <div className="knoppen pull-right">
-                        <div className="logo col-lg-2 col-xs-4 col-md-3 pull-left"><img alt="magisco-logo" className="img img-responsive" src={require('../../images/Magisco logo-3/PNG/logo-white-transparent.png')}></img> </div>
+                        <div className="logo col-lg-2 col-xs-4 col-md-3 pull-left"><img alt="magisco-logo" className="img img-responsive" src={require('../../images/Magisco logo-3/PNG/logo-white-transparent.png')}></img></div>
                         <a className={!this.state.showDeveloper ? 'button pull-right buttonselected' : 'button pull-right'} onClick={this.pickCompany}><h3>Company</h3></a>
                         <a className={this.state.showDeveloper ? 'button pull-right buttonselected' : 'button pull-right'} onClick={this.pickDeveloper}><h3>Developer</h3></a>
                     </div>
@@ -90,6 +91,7 @@ class HomeComponent extends Component {
                     {this.handleArrows()}
                 </div>
                 <TargetAudienceComponent showDeveloper={this.state.showDeveloper}/>
+                <FooterComponent/>
             </div>
         );
     }

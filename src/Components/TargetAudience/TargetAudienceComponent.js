@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import InformationComponent from './InformationComponent';
+import DeveloperInformationComponent from './DeveloperInformationComponent';
+import CompanyInformationComponent from './CompanyInformationComponent';
 import FormComponent from './FormComponent';
 import StepsComponent from './StepsComponent';
 /**
@@ -15,7 +16,7 @@ class TargetAudienceComponent extends Component {
                     ? 
                     <div>
                         <div className="contenttext">
-                            <InformationComponent />
+                            <DeveloperInformationComponent/>
                         </div>
                         <div>
                             <StepsComponent />
@@ -25,7 +26,11 @@ class TargetAudienceComponent extends Component {
                         </div>
                     </div>
                     :
-                    <div></div>
+                    <div>
+                        <div className="contenttext">
+                            <CompanyInformationComponent/>
+                        </div>
+                    </div>
                 }
             </div>
         );

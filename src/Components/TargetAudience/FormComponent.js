@@ -172,7 +172,7 @@ class FormComponent extends Component {
                                     <label>Message</label>
                                     <textarea className="form-control" name="message" placeholder="Leave a message for us here.." rows="8" required/>
                                 </div>
-                                <button className="btn btn-lg formbutton" type="submit">Submit</button>
+                                <button className="btn btn-lg formbutton" type="submit">Yes, I am Interested!</button>
                             </div>
                         </form>
                     </div>

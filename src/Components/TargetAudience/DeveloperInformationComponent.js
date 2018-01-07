@@ -5,7 +5,7 @@ import React, { Component } from 'react';
  * DeveloperComponent for rendering information and steps
  */
 
-class InformationComponent extends Component {
+class DeveloperInformationComponent extends Component {
     render() {
         return (
             <section id="info">
@@ -34,4 +34,4 @@ class InformationComponent extends Component {
     }
 }
 
-export default InformationComponent;
+export default DeveloperInformationComponent;
