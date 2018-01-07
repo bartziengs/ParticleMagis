@@ -12,7 +12,7 @@ class DeveloperInformationComponent extends Component {
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-6 col-md-6 col-xs-12">
-                            <img alt="chickie" className="img img-responsive" src={require('../../images/Maggy.png')}></img>
+                            <img alt="chickie" className="img img-responsive" src={require('../../../images/Maggy.png')}></img>
                         </div>
                         <div className="col-lg-6 col-md-6 col-xs-12 text-center infotext">
                             <h2>What do I do?</h2>

@@ -74,21 +74,8 @@ class HomeComponent extends Component {
                             <div className="DeveloperUSP">
                                 <div className="container contenttext col-lg-8 col-lg-offset-2 text-center">
                                     <h3>Are you a junior-developer? Are you frustrated by recruiters? Let me take care of you!</h3>
-                                    {/* <h1>Choose a company that fits your personality!</h1> */}
-                                    {/* <h3>Frustrated by all traditional recruitment processes? According to your preferences, Magisco will offer you a top-10 list of the best fitting companies.</h3> */}
-                                </div>
-                                <br/>
-                                <div className="row">
-                                    <div className="col-lg-3 col-md-6 col-xs-12 text-center">
-                                    </div>
-                                    <div className="col-lg-3 col-md-6 col-xs-12 text-center">
-                                        <button className="btn btn-lg formbutton-comp">More Information</button>
-                                    </div>
-                                    <div className="col-lg-3 col-md-6 col-xs-12 text-center">
-                                        <button className="btn btn-lg formbutton-dev">Yes, I am Interested!</button>
-                                    </div>
-                                    <div className="col-lg-3 col-md-6 col-xs-12 text-center">
-                                    </div>
+                                    <button className="btn btn-lg formbutton-comp">More Information</button>
+                                    <button className="btn btn-lg formbutton-dev">Yes, I am Interested!</button>
                                 </div>
                             </div>                              
                             :
@@ -96,28 +83,17 @@ class HomeComponent extends Component {
                                 <div className="container contenttext col-lg-12 text-center">
                                     <h3>Are you from a company? Let Maggy care about you </h3>
                                     <h2>It will not take long before we are looking for companies who want to hire the best developers, untill then, stay tuned!</h2>
-                                </div>
-                                <br/>
-                                <div className="row">
-                                    <div className="col-lg-3 col-md-6 col-xs-12 text-center">
-                                    </div>
-                                    <div className="col-lg-3 col-md-6 col-xs-12 text-center">
-                                        <button className="btn btn-lg formbutton-comp">More Information</button>
-                                    </div>
-                                    <div className="col-lg-3 col-md-6 col-xs-12 text-center">
-                                        <button className="btn btn-lg formbutton-dev">Yes, I am Interested!</button>
-                                    </div>
-                                    <div className="col-lg-3 col-md-6 col-xs-12 text-center">
-                                    </div>
-                                </div>                                                         
+                                    <button className="btn btn-lg formbutton-comp">More Information</button>
+                                    <button className="btn btn-lg formbutton-dev">Yes, I am Interested!</button>
+                                </div>                                                     
                             </div>                
                             }
                         </div>
                     </div>
                     <div className="row">
-
-                    </div>             
-                    {this.handleArrows()}
+                        <div className="arrow arrow-first"></div>
+                        <div className="arrow arrow-second"></div>
+                    </div>  
                 </div>
                 <TargetAudienceComponent showDeveloper={this.state.showDeveloper}/>
                 <FooterComponent/>

@@ -133,9 +133,15 @@ section {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1b147a', endColorstr='#0d1f4d',GradientType=1 );
   color: white; }
   .formbutton-dev {
-    background: #6ebb24; }
+    background: #6ebb24;
+    margin-top: 32px;
+    margin-left: 8px;
+    margin-right: 8px; }
   .formbutton-comp {
-    background: red; }
+    background: #854b0c;
+    margin-top: 32px;
+    margin-left: 8px;
+    margin-right: 8px; }
 
 .nopaddingleft {
   padding-left: 0px; }

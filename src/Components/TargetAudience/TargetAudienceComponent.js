@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import DeveloperInformationComponent from './DeveloperInformationComponent';
-import CompanyInformationComponent from './CompanyInformationComponent';
+import DeveloperInformationComponent from './DeveloperInformation/DeveloperInformationComponent';
+import CompanyInformationComponent from './CompanyInformation/CompanyInformationComponent';
 import FormComponent from './FormComponent';
 import StepsComponent from './StepsComponent';
 /**
