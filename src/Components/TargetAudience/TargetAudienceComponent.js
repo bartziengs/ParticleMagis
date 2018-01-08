@@ -24,12 +24,29 @@ class TargetAudienceComponent extends Component {
                         <div>
                             <FormComponent />
                         </div>
+                        <div>
+                            <CompanyInformationComponent/>    
+                        </div>
                     </div>
                     :
+                    // <div>
+                    //     <div className="contenttext">
+                    //         <CompanyInformationComponent/>
+                    //     </div>
+                    // </div>
                     <div>
                         <div className="contenttext">
-                            <CompanyInformationComponent/>
+                            <DeveloperInformationComponent/>
                         </div>
+                        <div>
+                            <StepsComponent />
+                        </div>
+                        <div>
+                            <FormComponent />
+                        </div>
+                        <div>
+                            <CompanyInformationComponent/>    
+                        </div>                        
                     </div>
                 }
             </div>

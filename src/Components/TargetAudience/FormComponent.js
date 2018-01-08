@@ -163,7 +163,7 @@ class FormComponent extends Component {
                                   <div className="form-group">
                                     <label>Phone Number</label>
                                     <input className="form-control" placeholder="Enter phone number here.." type="text" />
-                                  </div> */}
+                                  </div>
                                 <div className="form-group">
                                     <label>Subject</label>
                                     <input className="form-control" name="subject" placeholder="What is the subject?" type="text" />
@@ -171,8 +171,8 @@ class FormComponent extends Component {
                                 <div className="form-group">
                                     <label>Message</label>
                                     <textarea className="form-control" name="message" placeholder="Leave a message for us here.." rows="8" required/>
-                                </div>
-                                <button className="btn btn-lg formbutton" type="submit">Yes, I am Interested!</button>
+                                </div>*/}
+                                <button className="btn btn-lg formbutton-dev" type="submit">Yes, I am interested</button>
                             </div>
                         </form>
                     </div>

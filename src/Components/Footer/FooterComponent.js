@@ -14,17 +14,14 @@ class FooterComponent extends Component {
             <div className='footer'>
                 <div className="container">
                     <div className="row infotext stepsinfotext">
-                        <div className="col-lg-3 col-md-6 col-xs-12 text-center footer-text">
-                            Products
+                        <div className="col-lg-4 col-md-6 col-xs-12 text-center footer-text">
+                            Privacy Policy
                         </div>
-                        <div className="col-lg-3 col-md-6 col-xs-12 text-center footer-text">
-                            Company
+                        <div className="col-lg-4 col-md-6 col-xs-12 text-center footer-text">
+                            Terms of Service
                         </div>
-                        <div className="col-lg-3 col-md-6 col-xs-12 text-center footer-text">
-                            Contact
-                        </div>
-                        <div className="col-lg-3 col-md-6 col-xs-12 text-center footer-text">
-                            Connect
+                        <div className="col-lg-4 col-md-6 col-xs-12 text-center footer-text">
+                            KvK Nummer: 68904657
                         </div>
                     </div>
                 </div>

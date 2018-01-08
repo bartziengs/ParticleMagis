@@ -12,25 +12,52 @@ class CompanyInformationComponent extends Component {
         return (
             <section id="info">
                 <div className="jumbotron slider-container">
-                    <h3 className="row text-center partner-text">Partners</h3>
+                    <div className="partner-text">Partners</div>
                     <div className="row">
-                        <Slider {...this.props}>
-                            <div className="col-lg-3 col-md-6 col-xs-12 text-center">
-                                <img alt="magisco-logo" className="img img-responsive partner-logos" src={require('../../../images/frontmen.png')}></img>
+                        <Slider {...this.props} className="magisco-slider">
+                            <div className="col-lg-3 col-md-6 col-xs-12">
+                                <img height="120" width="120" alt="magisco-logo" className="img img-responsive partner-logos" src={require('../../../images/frontmen.png')}></img>
                             </div>
-                            <div className="col-lg-3 col-md-6 col-xs-12 text-center">
-                                <img alt="magisco-logo" className="img img-responsive partner-logos" src={require('../../../images/Magisco logo-3/PNG/logo-transparent.png')}></img>
+                            <div className="col-lg-3 col-md-6 col-xs-12">
+                                <img  height="120" width="120" alt="magisco-logo" className="img img-responsive partner-logos" src={require('../../../images/Magisco logo-3/PNG/logo-transparent.png')}></img>
                             </div>
-                            <div className="col-lg-3 col-md-6 col-xs-12 text-center">
-                                <img alt="magisco-logo" className="img img-responsive partner-logos" src={require('../../../images/logo-srxp.png')}></img>
+                            <div className="col-lg-3 col-md-6 col-xs-12">
+                                <img height="120" width="120" alt="magisco-logo" className="img img-responsive partner-logos" src={require('../../../images/logo-srxp.png')}></img>
                             </div>
-                            <div className="col-lg-3 col-md-6 col-xs-12 text-center">
-                                <img alt="magisco-logo" className="img img-responsive partner-logos" src={require('../../../images/UvA.png')}></img>
+                            <div className="col-lg-3 col-md-6 col-xs-12">
+                                <img height="120" width="120" alt="magisco-logo" className="img img-responsive partner-logos" src={require('../../../images/UvA.png')}></img>
                             </div> 
-                            <div className="col-lg-3 col-md-6 col-xs-12 text-center">
-                                <img alt="magisco-logo" className="img img-responsive partner-logos" src={require('../../../images/condept.jpeg')}></img>
-                            </div>                          
-                        </Slider>                                               
+                            <div className="col-lg-3 col-md-6 col-xs-12">
+                                <img height="120" width="120" alt="magisco-logo" className="img img-responsive partner-logos" src={require('../../../images/frontmen.png')}></img>
+                            </div>
+                            <div className="col-lg-3 col-md-6 col-xs-12">
+                                <img height="120" width="120" alt="magisco-logo" className="img img-responsive partner-logos" src={require('../../../images/uwardrobe.png')}></img>
+                            </div> 
+                            <div className="col-lg-3 col-md-6 col-xs-12">
+                                <img height="120" width="120" alt="magisco-logo" className="img img-responsive partner-logos" src={require('../../../images/rauweboon.png')}></img>
+                            </div> 
+                            <div className="col-lg-3 col-md-6 col-xs-12">
+                                <img height="120" width="120" alt="magisco-logo" className="img img-responsive partner-logos" src={require('../../../images/condept.jpeg')}></img>
+                            </div>                                                      
+                        </Slider>
+                        {/* <div className="col-lg-3 col-md-6 col-xs-12">
+                            <img height="120" width="120" alt="magisco-logo" className="img img-responsive partner-logos" src={require('../../../images/frontmen.png')}></img>
+                        </div>
+                        <div className="col-lg-3 col-md-6 col-xs-12">
+                            <img height="120" width="120" alt="magisco-logo" className="img img-responsive partner-logos" src={require('../../../images/logo-srxp.png')}></img>
+                        </div>
+                        <div className="col-lg-3 col-md-6 col-xs-12">
+                            <img height="120" width="120" alt="magisco-logo" className="img img-responsive partner-logos" src={require('../../../images/UvA.png')}></img>
+                        </div>
+                        <div className="col-lg-3 col-md-6 col-xs-12">
+                            <img height="120" width="120" alt="magisco-logo" className="img img-responsive partner-logos" src={require('../../../images/uwardrobe.png')}></img>
+                        </div>
+                        <div className="col-lg-3 col-md-6 col-xs-12">
+                            <img height="120" width="120" alt="magisco-logo" className="img img-responsive partner-logos" src={require('../../../images/rauweboon.png')}></img>
+                        </div>
+                        <div className="col-lg-3 col-md-6 col-xs-12">
+                            <img height="120" width="120" alt="magisco-logo" className="img img-responsive partner-logos" src={require('../../../images/condept.jpeg')}></img>
+                        </div>*/}
                     </div>                                       
                 </div>
             </section >
@@ -46,6 +73,7 @@ CompanyInformationComponent.defaultProps = {
     speed: 1000,
     infinite: true,
     arrows: false,
+    adaptiveHeight:true,
 }
 
 export default CompanyInformationComponent;

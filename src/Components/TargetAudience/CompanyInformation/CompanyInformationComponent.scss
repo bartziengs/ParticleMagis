@@ -1,15 +1,13 @@
-.partner-logos {
-    height:100px;
-    width:auto;;
-    margin-bottom:16px;
-}
-  
 .partner-text {
-    margin-bottom:48px;
     color:black;
+    padding-left:20px;
+    text-align: center;
+    font-family: 'Advent Pro', sans-serif;
+    font-size:500%;
 }
 
-.slide-item {
+.slick-slide {
+    padding-top:16px;
     width: 100%;
 }
 
@@ -17,16 +15,20 @@
     padding-top: 0;
 }
 
-.slick-slide {
-    padding-left: 6%;
+.slick-slider {
+    padding-left: 800px;
 }
-// .slick-active {
-//     width: 100%;
-// }
 
-// .slick-slide {
-//     margin-left:100px;
-// }
-// .slide-item {
-//     width: 100%;
-// }
+.magisco-slider{
+    max-height:120px;
+}
+
+.slick-slide {
+    max-height: 120px;
+    min-height: 120px;
+}
+
+.slick-list {
+    margin-top: 48px;
+    margin-bottom: 48px;
+}
