@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router';
 import './FooterComponent.css';
 
 
@@ -15,10 +16,10 @@ class FooterComponent extends Component {
                 <div className="container">
                     <div className="row infotext stepsinfotext">
                         <div className="col-lg-4 col-md-6 col-xs-12 text-center footer-text">
-                            Privacy Policy
+                            <Link to="/privacy">Privacy Policy</Link>
                         </div>
                         <div className="col-lg-4 col-md-6 col-xs-12 text-center footer-text">
-                            Terms of Service
+                            <Link to="/terms">Terms of Service</Link>
                         </div>
                         <div className="col-lg-4 col-md-6 col-xs-12 text-center footer-text">
                             KvK Nummer: 68904657
