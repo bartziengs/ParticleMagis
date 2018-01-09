@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import PartnersComponent  from './partner';
 /**
  * @author Bart Ziengs 1-12
  * DeveloperComponent for rendering information and steps
@@ -21,6 +21,7 @@ class InformationComponent extends Component {
                             <p>Our screening consists of several phases that are supported by a labor psychologist to ensure quality</p>
                         </div>
                     </div>
+                    <PartnersComponent />
                     <div className="row">
                         <div className="filmpje col-lg-12 col-md-12 col-sm-12 col-xs-12">
                             <div className="embed-responsive embed-responsive-16by9">
