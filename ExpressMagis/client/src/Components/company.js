@@ -9,8 +9,8 @@ class CompanyComponent extends Component {
   render() {
     return (
       <div className="container contenttext col-lg-12 text-center">
-        <h3>Are you from a company? Let Maggy care about you </h3>
-        <h2>It will not take long before we are looking for companies who want to hire the best developers, untill then, stay tuned!</h2>
+        <h2>Are you interested in developers? Are you looking for a great fit in your team?</h2>
+          <h2>Let me take care of you!</h2>
     </div>  
     );
   }

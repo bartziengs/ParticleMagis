@@ -43,7 +43,6 @@ class FormComponent extends Component {
     super(props);
     this.handleRendering = this.handleRendering.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
-    this.SubmitHandle = this.SubmitHandle.bind(this);
     this.form = this.form.bind(this);
     this.state = {formSent: null};
   }
@@ -65,12 +64,13 @@ class FormComponent extends Component {
   }
   /**
    * collects the data from the form and passes it to the express backend where it can be mailed
+   * this works with a nodejs backend, in this case Express.
    */
   handleSubmit(event){
     event.preventDefault();
     console.log("sendin data");
 
-    fetch('http://magisco.nl/cgi-bin/sendmail.pl', {
+    fetch('/send', {
       method: 'POST',
       headers: {
           'Accept': 'application/json',
@@ -78,9 +78,7 @@ class FormComponent extends Component {
       },
       body: JSON.stringify({
           name: document.getElementsByName('name')[0].value,
-          email: document.getElementsByName('email')[0].value,
-          subject: document.getElementsByName('subject')[0].value,
-          message: document.getElementsByName('message')[0].value
+          email: document.getElementsByName('email')[0].value
       })
     }).then((response) => response.json()).then((responseJson) => {
         if (responseJson.success) {
@@ -96,32 +94,7 @@ class FormComponent extends Component {
     });
   }
 
-  SubmitHandle(event){
-      event.preventDefault();
-      if(this.state.formSent === null) {
-          this.setState({formSent: true})
-      }
-      var frm = document.getElementById('formform');
-      $("#formform").attr('target','dummyframe');
-      frm.submit(function(ev) {
-          ev.preventDefault();
-          $.ajax({
-              type: frm.attr('method'),
-              url: frm.attr('action'),
-              data: frm.serialize(),
-              target: 'dummyframe',
-              success: function (data) {
-                  console.log('Submission was successful.');
-                  console.log(data);
-              },
-              error: function (data) {
-                  console.log('An error occurred.');
-                  console.log(data);
-              },
-          });
-      })
-      return true;
-  }
+
 
   /**
    * the original form
@@ -134,7 +107,7 @@ class FormComponent extends Component {
                 <div className="col-lg-12 well">
                     <div className="row">
                         <iframe title="formFrame" width="0" height="0" border="0" name="dummyframe" id="dummyframe"></iframe>
-                        <form id="formform" action="/cgi-bin/mailer.php" method="POST"  onSubmit={this.SubmitHandle} >
+                        <form id="formform" onSubmit={this.handleSubmit} >
                             <div className="col-sm-12">
                                 <div className="row">
                                     <div className="col-sm-6 form-group">
@@ -146,32 +119,6 @@ class FormComponent extends Component {
                                         <input className="form-control" name="email" placeholder="Enter Email here.." type="email" required/>
                                     </div>
                                 </div>
-                                {/* <div className="row">
-                                    <div className="col-sm-4 form-group">
-                                      <label>City</label>
-                                      <input className="form-control" placeholder="Enter city name here.." type="text" />
-                                    </div>
-                                    <div className="col-sm-4 form-group">
-                                      <label>ZIP</label>
-                                      <input className="form-control" placeholder="Enter ZIP code Here.." type="text" />
-                                    </div>
-                                    <div className="col-sm-4 form-group">
-                                      <label>House number</label>
-                                      <input className="form-control" placeholder="Enter house number Here.." type="text" />
-                                    </div>
-                                  </div>
-                                  <div className="form-group">
-                                    <label>Phone Number</label>
-                                    <input className="form-control" placeholder="Enter phone number here.." type="text" />
-                                  </div>
-                                <div className="form-group">
-                                    <label>Subject</label>
-                                    <input className="form-control" name="subject" placeholder="What is the subject?" type="text" />
-                                </div>
-                                <div className="form-group">
-                                    <label>Message</label>
-                                    <textarea className="form-control" name="message" placeholder="Leave a message for us here.." rows="8" required/>
-                                </div>*/}
                                 <button className="btn btn-lg formbutton" type="submit">Yes, I am interested</button>
                             </div>
                         </form>

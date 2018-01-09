@@ -5,6 +5,7 @@ import FormComponent from './form';
 import InformationComponent from './information';
 import ParticleComponent from './particle';
 import StepsComponent from './steps';
+import PartnerComponent from './partners';
 import FooterComponent from './footer';
 
 /**
@@ -64,22 +65,16 @@ class HomeComponent extends Component {
         return <div>
             {this.state.showDeveloper &&
                 <div>
-                    <div>
-                        <div className="arrow arrow-first"></div>
-                        <div className="arrow arrow-second"></div>
-                    </div>
                     <div className="contenttext">
                         <InformationComponent />
                     </div>
                     <div>
                         <StepsComponent />
                     </div>
-                    <div>
-                        <FormComponent />
-                    </div>
                 </div>
 
             }
+            <PartnerComponent />
             <FooterComponent />
         </div>
     }
@@ -115,6 +110,13 @@ class HomeComponent extends Component {
                             {this.handleRendering()}
                         </div>
                     </div>
+                </div>
+                <div>
+                    <div className="arrow arrow-first"></div>
+                    <div className="arrow arrow-second"></div>
+                </div>
+                <div>
+                    <FormComponent />
                 </div>
                 {this.handleAdditionalInfo()}
             </div>
