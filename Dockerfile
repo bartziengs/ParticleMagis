@@ -1,7 +1,5 @@
 # base image
-FROM node:latest
-
-ENV NPM_CONFIG_LOGLEVEL warn
+FROM node:alpine
 
 # open ports (multiple because experimental)
 EXPOSE 80 3000 3001 5000 5001
@@ -11,11 +9,11 @@ WORKDIR app
 
 # install packages
 COPY package*.json ./
-RUN npm install && npm install -g serve
+RUN npm install
 
 COPY . .
 
 RUN npm run build
 
 # start app
-CMD ["serve", "--cors"]
+CMD ["npm", "start"]
