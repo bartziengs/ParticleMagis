@@ -2,12 +2,15 @@
 
 # dependencies
 /node_modules
+/ExpressMagis/node_modules
+/ExpressMagis/client/node_modules
 
 # testing
 /coverage
 
 # production
 /build
+/ExpressMagis/client/build
 
 # misc
 .DS_Store
