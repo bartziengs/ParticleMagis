@@ -7,10 +7,7 @@ import './FooterComponent.css';
  * DeveloperComponent for rendering information and steps
  */
 
-class PPComponent extends Component {
-    render() {
-
-        return (
+const PPComponent = () => (
             <div>
                 <h2>
                     <strong>Privacy Notice of the website</strong>
@@ -262,7 +259,5 @@ class PPComponent extends Component {
 
             </div>
         );
-    }
-}
 
 export default PPComponent;

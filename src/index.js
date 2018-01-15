@@ -2,29 +2,24 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import registerServiceWorker from './registerServiceWorker';
-import { HashRouter } from 'react-router-dom';
-import Routes from './routes';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import HomeComponent from './Components/Home/HomeComponent';
+import PPComponent from './Components/Footer/PPComponent';
+import TermsComponent from './Components/Footer/TermsComponent';
 
 
 
 let applicationTarget = document.getElementById('particles');
 
-// Redux store
-// import { Provider } from 'react-redux';
-// import { store } from './state/store';
-//ReactDOM.render(
-//    <Provider store={store}>
-//      <Routes history={hashHistory}/>
-//    </Provider>,
-//    target
-//  );
 
 ReactDOM.render(
-    (
-        <HashRouter>
-            <App />
-        </HashRouter>
-    ),
+    <Router>
+        <div>
+        <Route exact path="/" component={HomeComponent} />
+        <Route path="/privacy" component={PPComponent} />
+        <Route path="/terms" component={TermsComponent} />
+        </div>
+    </Router>,
     applicationTarget
 );
 
