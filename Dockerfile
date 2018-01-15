@@ -2,7 +2,7 @@
 FROM node:alpine
 
 # open ports (multiple because experimental)
-EXPOSE 80 3000 3001 5000 5001
+EXPOSE 3000
 
 # set a working directory
 WORKDIR app

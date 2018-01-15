@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import registerServiceWorker from './registerServiceWorker';
-import { hashHistory } from 'react-router';
+import { HashRouter } from 'react-router-dom';
 import Routes from './routes';
 
 
@@ -20,8 +20,12 @@ let applicationTarget = document.getElementById('particles');
 //  );
 
 ReactDOM.render(
-    <Routes history={hashHistory} />, 
-    applicationTarget    
+    (
+        <HashRouter>
+            <App />
+        </HashRouter>
+    ),
+    applicationTarget
 );
 
 registerServiceWorker();
