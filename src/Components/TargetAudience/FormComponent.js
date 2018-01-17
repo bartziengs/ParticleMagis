@@ -81,6 +81,7 @@ class FormComponent extends Component {
           email: document.getElementsByName('email')[0].value
       })
     }).then((response) => response.json()).then((responseJson) => {
+        console.log(responseJson)
         if (responseJson.success) {
             this.setState({formSent: true})
             console.log('form is sent')
