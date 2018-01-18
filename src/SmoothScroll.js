@@ -1,3 +1,6 @@
+// how to use:
+// step 1. import Smoothscroll
+// step 2. use Smoothscroll.scrollTo("id of element") anywhere in code.
 var smoothScroll = {
     timer: null,
 
