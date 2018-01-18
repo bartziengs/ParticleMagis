@@ -44,6 +44,7 @@ class FormComponent extends Component {
     this.handleRendering = this.handleRendering.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleInputChange = this.handleInputChange.bind(this);
+    this.handleCaptcha = this.handleCaptcha.bind(this);
     this.form = this.form.bind(this);
     this.state = {
         formSent: null,
@@ -77,6 +78,33 @@ class FormComponent extends Component {
         }
     }
   }
+
+  handleCaptcha = (event, UsrResponse) => {
+      event.preventDefault();
+      fetch('https://www.google.com/recaptcha/api/siteverify', {
+          method: 'POST',
+          headers: new Headers ({
+              'Content-Type': 'application/json',
+              'cache-control': 'no-cache'
+          }),
+          body: JSON.stringify({
+              secret: '6LdyqT8UAAAAABpNx43hnTg3IfKB5Li9yxUlSg66',
+              response: UsrResponse
+          })
+      })
+          .then(response => response.json()).then((responseJson) => {
+          console.log(responseJson)
+          if (responseJson.success) {
+              this.handleSubmit();
+              console.log('no robot detected')
+          } else {
+              console.log('robot detected')
+          }
+      }).catch((error) => {
+          console.error(error);
+      });
+  }
+
   /**
    * collects the data from the form and passes it to the express backend where it can be mailed
    * this works with a nodejs backend, in this case Express.
@@ -137,7 +165,10 @@ class FormComponent extends Component {
                                         <input className="form-control" name="mail" value={this.state.mail} onChange={this.handleInputChange} placeholder="Enter Email here.." type="email" required/>
                                     </div>
                                 </div>
-                                <button className="btn btn-lg formbutton-dev" type="submit">Yes, I am interested</button>
+                                <div className="row">
+                                    <button className="btn btn-lg formbutton-dev" type="submit">Yes, I am interested</button>
+                                    <div class="g-recaptcha" data-sitekey="6LdyqT8UAAAAABpNx43hnTg3IfKB5Li9yxUlSg66" data-callback={this.handleCaptcha}></div>
+                                </div>
                             </div>
                         </form>
                     </div>

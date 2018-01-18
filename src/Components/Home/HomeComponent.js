@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import ParticleComponent from './ParticleComponent';
 import TargetAudienceComponent from '../TargetAudience/TargetAudienceComponent';
 import FooterComponent from '../Footer/FooterComponent';
+import Smoothscroll from '../../SmoothScroll';
 
 /**
  * @author Bart Ziengs, 1-12-17
@@ -74,8 +75,8 @@ class HomeComponent extends Component {
                             <div className="DeveloperUSP">
                                 <div className="container contenttext col-lg-8 col-lg-offset-2 text-center">
                                     <h3>Are you a junior-developer? Are you frustrated by recruiters? Let me take care of you!</h3>
-                                    <button className="btn btn-lg formbutton-comp">More Information</button>
-                                    <button className="btn btn-lg formbutton-dev">Yes, I am Interested!</button>
+                                    <a className="btn btn-lg formbutton-comp" onClick={() => {Smoothscroll.scrollTo("filmpie")}}>More Information</a>
+                                    <a className="btn btn-lg formbutton-dev">Yes, I am Interested!</a>
                                 </div>
                             </div>                              
                             :
