@@ -1,23 +1,36 @@
 {
-  "name": "ttt",
+  "name": "client",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "dns": "^0.2.2",
-    "nodemailer": "^4.4.0",
+    "body-parser": "^1.18.2",
+    "cookie-parser": "^1.4.3",
+    "jquery": "^3.2.1",
+    "morgan": "^1.9.0",
+    "node-sass-chokidar": "0.0.3",
+    "nodemailer": "^4.4.1",
+    "npm-run-all": "^4.1.2",
     "react": "^16.2.0",
     "react-bootstrap": "^0.31.5",
     "react-dom": "^16.2.0",
     "react-particles-js": "^2.1.0",
-    "react-scripts": "1.0.17"
+    "react-router": "^3.0.5",
+    "react-scripts": "1.0.17",
+    "react-slick": "^0.16.0",
+    "serve-favicon": "^2.4.5"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build-css": "node-sass-chokidar src/ -o src/",
+    "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive",
+    "start-js": "react-scripts start",
+    "build-js": "react-scripts build",
+    "build": "npm-run-all build-css build-js",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "start": "react-scripts start",
+    "start:server": "node server"
   },
-  "proxy": "http://localhost:3001",
+  "proxy": "http://localhost:5000",
   "devDependencies": {
     "pug-as-jsx-loader": "^1.0.35"
   }
