@@ -43,8 +43,23 @@ class FormComponent extends Component {
     super(props);
     this.handleRendering = this.handleRendering.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleInputChange = this.handleInputChange.bind(this);
     this.form = this.form.bind(this);
-    this.state = {formSent: null};
+    this.state = {
+        formSent: null,
+        fullName: '',
+        mail: ''
+    };
+  }
+
+
+  handleInputChange(event) {
+    let target = event.target;
+    let value = target.value;
+    let name = target.name;
+    this.setState({
+      [name]: value
+    });
   }
 
     /**
@@ -69,18 +84,20 @@ class FormComponent extends Component {
   handleSubmit(event){
     event.preventDefault();
     console.log("sendin data");
-
-    fetch('/send', {
+    console.log(this.state.fullName)
+    console.log(this.state.mail)
+    fetch('http://localhost:5000/send', {
       method: 'POST',
-      headers: {
-          'Accept': 'application/json',
+      headers: new Headers ({
           'Content-Type': 'application/json',
-      },
+          'cache-control': 'no-cache'
+      }),
       body: JSON.stringify({
-          name: document.getElementsByName('name')[0].value,
-          email: document.getElementsByName('email')[0].value
+          name: this.state.fullName,
+          email: this.state.mail
       })
-    }).then((response) => response.json()).then((responseJson) => {
+    })
+    .then(response => response.json()).then((responseJson) => {
         console.log(responseJson)
         if (responseJson.success) {
             this.setState({formSent: true})
@@ -113,11 +130,11 @@ class FormComponent extends Component {
                                 <div className="row">
                                     <div className="col-sm-6 form-group">
                                         <label>Your Name</label>
-                                        <input className="form-control" name="name" placeholder="Enter full name here.." type="text" pattern=".{4,}" required/>
+                                        <input className="form-control" name="fullName" value={this.state.fullName} onChange={this.handleInputChange} placeholder="Enter full name here.." type="text" pattern=".{4,}" required/>
                                     </div>
                                     <div className="col-sm-6 form-group">
                                         <label>Your Email</label>
-                                        <input className="form-control" name="email" placeholder="Enter Email here.." type="email" required/>
+                                        <input className="form-control" name="mail" value={this.state.mail} onChange={this.handleInputChange} placeholder="Enter Email here.." type="email" required/>
                                     </div>
                                 </div>
                                 <button className="btn btn-lg formbutton-dev" type="submit">Yes, I am interested</button>

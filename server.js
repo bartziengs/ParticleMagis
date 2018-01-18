@@ -7,6 +7,8 @@ const logger = require('morgan');
 const cookieParser = require('cookie-parser');
 const nodemailer = require('nodemailer');
 
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'build')));
 
 app.get('/', function (req, res) {
@@ -28,15 +30,18 @@ var transporter = nodemailer.createTransport({
 
 app.post('/send', function (req, res) {
     console.log('komen we op d esrever?');
-    const {name, email, subject, message} = req.body;
+    // console.log(req.body.name)
+    // console.log(req.body.email)
+    // console.log(req.body);
+    const {name, email} = req.body;
     transporter.sendMail({
         from: {
             name: name,
             address: email
         },
         to: 'info@magisco.nl',
-        subject: subject,
-        text: message
+        subject: 'subscriber',
+        text: 'new subscriber'
     }, (err, info) => {
         if(err != null) {
             console.log(err);
@@ -44,5 +49,4 @@ app.post('/send', function (req, res) {
             return res.json({success: false});
         } else return res.json({success: true});
     });
-
 });
