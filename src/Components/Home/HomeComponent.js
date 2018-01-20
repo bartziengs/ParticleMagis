@@ -75,8 +75,8 @@ class HomeComponent extends Component {
                             <div className="DeveloperUSP">
                                 <div className="container contenttext col-lg-8 col-lg-offset-2 text-center">
                                     <h3>Are you a junior-developer? Are you frustrated by recruiters? Let me take care of you!</h3>
-                                    <a className="btn btn-lg formbutton-comp" onClick={() => {Smoothscroll.scrollTo("info")}}>More Information</a>
-                                    <a className="btn btn-lg formbutton-dev" onClick={() => {Smoothscroll.scrollTo("foot")}}>Yes, I am Interested!</a>
+                                    <button className="btn btn-lg formbutton-comp" onClick={() => {Smoothscroll.scrollTo("info")}}>More Information</button>
+                                    <button className="btn btn-lg formbutton-dev" onClick={() => {Smoothscroll.scrollTo("foot")}}>Yes, I am Interested!</button>
                                 </div>
                             </div>                              
                             :
@@ -84,8 +84,8 @@ class HomeComponent extends Component {
                                 <div className="container contenttext col-lg-12 text-center">
                                     <h3>Are you from a company? Let Maggy care about you </h3>
                                     <h2>It will not take long before we are looking for companies who want to hire the best developers, untill then, stay tuned!</h2>
-                                    <a className="btn btn-lg formbutton-comp" onClick={() => {Smoothscroll.scrollTo("info")}}>More Information</a>
-                                    <a className="btn btn-lg formbutton-dev" onClick={() => {Smoothscroll.scrollTo("foot")}}>Yes, I am Interested!</a>
+                                    <button className="btn btn-lg formbutton-comp" onClick={() => {Smoothscroll.scrollTo("info")}}>More Information</button>
+                                    <button className="btn btn-lg formbutton-dev" onClick={() => {Smoothscroll.scrollTo("foot")}}>Yes, I am Interested!</button>
                                 </div>                                                     
                             </div>                
                             }
