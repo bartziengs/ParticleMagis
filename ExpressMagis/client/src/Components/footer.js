@@ -46,7 +46,7 @@ class FooterComponent extends Component {
     render = () => {
         return (
             <footer class="footer">
-                <div class="container">
+                <div class="container footer">
                     <div class="footermodal">
                         <p className="col-xs-4 text-center"><span onClick={this.showPrivacy}>Privacy Policy</span></p>
                         <p className="col-xs-4 text-center"><span onClick={this.showTerms}>Terms of Service</span></p>

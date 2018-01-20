@@ -9,6 +9,7 @@
     "react": "^16.2.0",
     "react-bootstrap": "^0.31.5",
     "react-dom": "^16.2.0",
+    "react-modal": "^3.1.11",
     "react-particles-js": "^2.1.0",
     "react-scripts": "1.0.17",
     "react-slick-carousel": "^0.14.9",
@@ -18,11 +19,12 @@
     "build-css": "node-sass-chokidar src/ -o src/",
     "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive",
     "start-js": "react-scripts start",
-    "start": "npm-run-all -p watch-css start-js",
     "build-js": "react-scripts build",
     "build": "npm-run-all build-css build-js",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "start": "npm-run-all -p watch-css start-js",
+    "start:server": "node server"
   },
   "proxy": "http://localhost:5001",
   "devDependencies": {
