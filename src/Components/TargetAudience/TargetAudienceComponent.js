@@ -15,11 +15,11 @@ class TargetAudienceComponent extends Component {
                 {(this.props.showDeveloper)
                     ?
                     <div>
-                        <div className="contenttext">
-                            <DeveloperInformationComponent />
-                        </div>
                         <div>
                             <StepsComponent />
+                        </div>
+                        <div className="contenttext">
+                            <DeveloperInformationComponent />
                         </div>
                         <div>
                             <FormComponent />
