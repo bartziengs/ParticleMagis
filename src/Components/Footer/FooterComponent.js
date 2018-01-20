@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Modal from 'react-modal';
 import { modalResources } from '../Resources/modal-resources';
+import './FooterComponent.css';
 
 /**
  * @author Bart Ziengs 3-01-2017
@@ -45,8 +46,8 @@ class FooterComponent extends Component {
 
     render = () => {
         return (
-            <footer class="footer">
-                <div class="container">
+            <footer className="footer">
+                <div className="container footer footer-text">
                     <div class="footermodal">
                         <p className="col-xs-6 text-center footer-text"><span className="align-middle" onClick={this.showPrivacy}>Privacy Policy</span></p>
                         <p className="col-xs-6 text-center footer-text"><span onClick={this.showTerms}>Terms of Service</span></p>
@@ -58,7 +59,7 @@ class FooterComponent extends Component {
                         >
                             <i class="fa fa-times pull-right" onClick={this.closeModal}></i>
                             <div dangerouslySetInnerHTML={this.state.showPrivacy ? { __html: modalResources.privacyPolicy } : { __html: modalResources.termsOfService }}></div>
-                        </Modal>
+                        </Modal>    
                     </div>
                 </div>
             </footer>
