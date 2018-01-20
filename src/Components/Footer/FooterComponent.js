@@ -12,7 +12,7 @@ class FooterComponent extends Component {
     render() {
 
         return (
-            <div className='footer'>
+            <div className='footer' id="foot">
                 <div className="container">
                     <div className="row infotext stepsinfotext">
                         <div className="col-lg-4 col-md-6 col-xs-12 text-center footer-text">
