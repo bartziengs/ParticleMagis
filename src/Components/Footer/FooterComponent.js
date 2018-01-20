@@ -1,34 +1,70 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router';
-import './FooterComponent.css';
-
+import Modal from 'react-modal';
+import { modalResources } from '../Resources/modal-resources';
 
 /**
- * @author Bart Ziengs 1-12
- * DeveloperComponent for rendering information and steps
+ * @author Bart Ziengs 3-01-2017
+ * Footer component for the entire website
  */
 
 class FooterComponent extends Component {
-    render() {
 
+    constructor() {
+        super();
+
+        this.state = {
+            modalIsOpen: false,
+            showPrivacy: false,
+        }
+
+        this.openModal = this.openModal.bind(this);
+        this.closeModal = this.closeModal.bind(this);
+    }
+
+    openModal = () => {
+        this.setState({ modalIsOpen: true });
+    }
+
+    closeModal = () => {
+        this.setState({ modalIsOpen: false });
+    }
+
+    showPrivacy = () => {
+        this.setState({
+            showPrivacy: true,
+        })
+        this.openModal();
+    }
+
+    showTerms = () => {
+        this.setState({
+            showPrivacy: false
+        })
+        this.openModal();
+    }
+
+    render = () => {
         return (
-            <div className='footer'>
-                <div className="container">
-                    <div className="row infotext stepsinfotext">
-                        <div className="col-lg-4 col-md-6 col-xs-12 text-center footer-text">
-                            <Link to="/privacy">Privacy Policy</Link>
-                        </div>
-                        <div className="col-lg-4 col-md-6 col-xs-12 text-center footer-text">
-                            <Link to="/terms">Terms of Service</Link>
-                        </div>
-                        <div className="col-lg-4 col-md-6 col-xs-12 text-center footer-text">
-                            KvK Nummer: 68904657
-                        </div>
+            <footer class="footer">
+                <div class="container">
+                    <div class="footermodal">
+                        <p className="col-xs-6 text-center footer-text"><span className="align-middle" onClick={this.showPrivacy}>Privacy Policy</span></p>
+                        <p className="col-xs-6 text-center footer-text"><span onClick={this.showTerms}>Terms of Service</span></p>
+                        <Modal
+                            isOpen={this.state.modalIsOpen}
+                            style={modalResources.customStyles}
+                            onRequestClose={this.closeModal}
+                            contentLabel="footerModalPrivacyEnServices"
+                        >
+                            <i class="fa fa-times pull-right" onClick={this.closeModal}></i>
+                            <div dangerouslySetInnerHTML={this.state.showPrivacy ? { __html: modalResources.privacyPolicy } : { __html: modalResources.termsOfService }}></div>
+                        </Modal>
                     </div>
                 </div>
-            </div>
-        );
-    }
+            </footer>
+        )
+    };
+
 }
 
 export default FooterComponent;
