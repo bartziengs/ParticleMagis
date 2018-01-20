@@ -3,6 +3,7 @@ import ParticleComponent from './ParticleComponent';
 import TargetAudienceComponent from '../TargetAudience/TargetAudienceComponent';
 import FooterComponent from '../Footer/FooterComponent';
 import Smoothscroll from '../../SmoothScroll';
+import './HomeComponent.css';
 
 /**
  * @author Bart Ziengs, 1-12-17
