@@ -24,7 +24,7 @@ class DeveloperInformationComponent extends Component {
                     <div className="row">
                         <div className="filmpje col-lg-12 col-md-12 col-sm-12 col-xs-12">
                             <div className="embed-responsive embed-responsive-16by9">
-                                <iframe className="center-block" src="https://www.youtube.com/embed/dDdczTHU_DA" />
+                                <iframe className="center-block" src="https://www.youtube.com/embed/dDdczTHU_DA?&rel=0" />
                             </div>
                         </div>
                     </div>
