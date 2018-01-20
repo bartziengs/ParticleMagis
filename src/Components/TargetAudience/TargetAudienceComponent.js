@@ -21,15 +21,15 @@ class TargetAudienceComponent extends Component {
                         <div>
                             <StepsComponent />
                         </div>
-                        <div>
-                            <FormComponent />
-                        </div>
                     </div>
                     :
                     <div>
                         <CompanyInformationComponent />
                     </div>
                 }
+                <div>
+                    <FormComponent target={this.props.showDeveloper}/>
+                </div>
             </div>
         );
     }
