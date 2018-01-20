@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import ParticleComponent from './ParticleComponent';
 import TargetAudienceComponent from '../TargetAudience/TargetAudienceComponent';
 import FooterComponent from '../Footer/FooterComponent';
+import Smoothscroll from '../../SmoothScroll';
 
 /**
  * @author Bart Ziengs, 1-12-17
@@ -74,8 +75,8 @@ class HomeComponent extends Component {
                             <div className="DeveloperUSP">
                                 <div className="container contenttext col-lg-8 col-lg-offset-2 text-center">
                                     <h3>Are you a junior-developer? Are you frustrated by recruiters? Let me take care of you!</h3>
-                                    <button className="btn btn-lg formbutton-comp">More Information</button>
-                                    <button className="btn btn-lg formbutton-dev">Yes, I am Interested!</button>
+                                    <button className="btn btn-lg formbutton-comp" onClick={() => {Smoothscroll.scrollTo("info")}}>More Information</button>
+                                    <button className="btn btn-lg formbutton-dev" onClick={() => {Smoothscroll.scrollTo("foot")}}>Yes, I am Interested!</button>
                                 </div>
                             </div>                              
                             :
@@ -83,17 +84,17 @@ class HomeComponent extends Component {
                                 <div className="container contenttext col-lg-12 text-center">
                                     <h3>Are you from a company? Let Maggy care about you </h3>
                                     <h2>It will not take long before we are looking for companies who want to hire the best developers, untill then, stay tuned!</h2>
-                                    <button className="btn btn-lg formbutton-comp">More Information</button>
-                                    <button className="btn btn-lg formbutton-dev">Yes, I am Interested!</button>
+                                    <button className="btn btn-lg formbutton-comp" onClick={() => {Smoothscroll.scrollTo("info")}}>More Information</button>
+                                    <button className="btn btn-lg formbutton-dev" onClick={() => {Smoothscroll.scrollTo("foot")}}>Yes, I am Interested!</button>
                                 </div>                                                     
                             </div>                
                             }
                         </div>
                     </div>
                     <div className="row">
-                        <div className="arrow arrow-first"></div>
-                        <div className="arrow arrow-second"></div>
-                    </div>  
+                            <div className="arrow arrow-first"></div>
+                            <div className="arrow arrow-second"></div>
+                    </div>
                 </div>
                 <TargetAudienceComponent showDeveloper={this.state.showDeveloper}/>
                 <FooterComponent/>
