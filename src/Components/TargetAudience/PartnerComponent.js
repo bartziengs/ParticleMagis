@@ -6,7 +6,7 @@ export default class PartnerComponent extends Component {
         return (
             <div className="container">
             <h2>A selection of our partners that we enjoy working with:</h2>
-                <div className="row">
+                <div className="row partnerrow">
                     <div class="column">
                         <img alt="chickie" className="img img-responsive" src={require('../../images/partners/png/1_ace.png')}></img>
                         <img alt="chickie" className="img img-responsive" src={require('../../images/partners/png/2_condept.png')}></img>
