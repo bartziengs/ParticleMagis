@@ -32,6 +32,7 @@
   },
   "proxy": "http://localhost:5000",
   "devDependencies": {
-    "pug-as-jsx-loader": "^1.0.35"
+    "pug-as-jsx-loader": "^1.0.35",
+    "react-modal": "^3.1.11"
   }
 }
