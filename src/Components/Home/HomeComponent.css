@@ -1,0 +1,19 @@
+.flexcontainer {
+  display: flex;
+  justify-content: center;
+  /* align horizontal */
+  align-items: center;
+  /* align vertical */
+  width: 100%; }
+  .flexcontainer img {
+    max-width: 50%; }
+
+@media (max-width: 800px) {
+  .flexcontainer img {
+    max-width: 70%; } }
+
+@media (min-width: 1200px) {
+  .flexcontainer img {
+    max-width: 600px; }
+  .jumbotron {
+    padding-top: 5%; } }
