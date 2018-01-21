@@ -10,7 +10,6 @@ class CompanyInformationComponent extends Component {
     render() {
         return (
             <section id="company-info">
-            <p>pitch deck voor companies hier</p>
             </section >
         );
     }
