@@ -4,7 +4,6 @@ import TargetAudienceComponent from '../TargetAudience/TargetAudienceComponent';
 import FooterComponent from '../Footer/FooterComponent';
 import Smoothscroll from '../../SmoothScroll';
 import './HomeComponent.css';
-
 /**
  * @author Bart Ziengs, 1-12-17
  * This is the main component, rendering the particle background and 
@@ -70,7 +69,9 @@ class HomeComponent extends Component {
                     </div>
                     <div className="jumbotron">
                         <div className="box">
-                            <h1>Hi! it's Maggy from Magisco</h1>
+                        <div className="flexcontainer">
+                        <img alt="magisco-logo" className="img img-responsive" src={require('../../images/Maggy.png')}></img>
+                        </div>
                             {(this.state.showDeveloper) 
                             ? 
                             <div className="DeveloperUSP">

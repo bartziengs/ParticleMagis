@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Particles from '../../../node_modules/react-particles-js/lib/particles';
-
+import './HomeComponent.scss';
 
 /**
  * @author Bart Ziengs, 1-12-17
