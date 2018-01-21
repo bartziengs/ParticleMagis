@@ -84,8 +84,7 @@ class HomeComponent extends Component {
                             :
                             <div className="CompanyUSP">
                                 <div className="container contenttext col-lg-12 text-center">
-                                    <h3>Are you from a company? Let Maggy care about you </h3>
-                                    <h2>It will not take long before we are looking for companies who want to hire the best developers, untill then, stay tuned!</h2>
+                                    <h3>Are you part of a company? Are you looking for talent that fits in your team? Let me take care of you! </h3>
                                     <button className="btn btn-lg formbutton-comp" onClick={() => {Smoothscroll.scrollTo("steps")}}>How it works</button>
                                     <button className="btn btn-lg formbutton-dev" onClick={() => {Smoothscroll.scrollTo("foot")}}>Yes, I am Interested!</button>
                                 </div>                                                     
