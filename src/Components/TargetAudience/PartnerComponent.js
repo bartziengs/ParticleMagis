@@ -4,7 +4,7 @@ import './PartnerComponent.css';
 export default class PartnerComponent extends Component {
     render() {
         return (
-            <div className="container">
+            <div className="container ">
             <h2>A selection of our partners that we enjoy working with:</h2>
                 <div className="row">
                     <div class="column">
