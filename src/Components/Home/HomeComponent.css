@@ -17,3 +17,5 @@
     max-width: 600px; }
   .jumbotron {
     padding-top: 5%; } }
+.jumbotron {
+  background: lightblue url("../../images/9.png") no-repeat fixed center center; }
