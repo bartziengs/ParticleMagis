@@ -716,18 +716,17 @@ Magisco by sending an e-mail to    <a href="mailto:info@linqu.io">info@magisco.n
         },
         content: {
             position: 'absolute',
+            width: '60%',
+            left: '20%',
             top: '40px',
-            left: '20px',
-            right: '20px',
             bottom: '40px',
-            border: '1px solid #ccc',
+            border: '2px solid #ccc',
             background: '#fff',
             overflow: 'auto',
             WebkitOverflowScrolling: 'touch',
             borderRadius: '8px',
             outline: 'none',
             padding: '20px'
-
         }
     }
 }

@@ -110,34 +110,26 @@ class FormComponent extends Component {
 
   /**
    * the original form
+   *
    */
   form() {
     return (
         <section id="form">
-            <div className="container" id="Register">
-                <h1 className="well" style={{textAlign: 'center'}}>Interested? Let Maggy help you!</h1>
-                <div className="col-lg-12 well">
-                    <div className="row">
-                        <iframe title="formFrame" width="0" height="0" border="0" name="dummyframe" id="dummyframe"></iframe>
-                        <form id="formform" onSubmit={this.handleSubmit} >
-                            <div className="col-sm-12">
-                                <div className="row">
-                                    <div className="col-sm-6 form-group">
-                                        <label>Your Name</label>
-                                        <input className="form-control" name="fullName" value={this.state.fullName} onChange={this.handleInputChange} placeholder="Enter full name here.." type="text" pattern=".{4,}" required/>
-                                    </div>
-                                    <div className="col-sm-6 form-group">
-                                        <label>Your Email</label>
-                                        <input className="form-control" name="mail" value={this.state.mail} onChange={this.handleInputChange} placeholder="Enter Email here.." type="email" required/>
-                                    </div>
-                                </div>
-                                <button className="btn btn-lg formbutton-dev" type="submit">Yes, I am interested</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
+            <div id="formdiv">
+                {(this.props.target)
+                    ?
+                    <iframe id="devgoogleform"
+                            src="https://docs.google.com/forms/d/e/1FAIpQLScWYTwvBQ1a-UuX2I7gT9SOUI1Uvgf7Uzea2SgjJQu8AAXxJA/viewform?embedded=true"
+                            width="100%" height="600" scrolling="no" frameborder="0" marginheight="0"
+                            marginwidth="0">Loading...</iframe>
+
+                    :
+                    <iframe id="compgoogleform"
+                            src="https://docs.google.com/forms/d/e/1FAIpQLSc2aHtcYGJmRweOplaa8bg_aSTgFx5je_pTW097oUZ7IH6Ddw/viewform?embedded=true"
+                            width="100%" height="600" scrolling="no" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+                }</div>
         </section>
+
     );
   }
 
@@ -147,3 +139,28 @@ class FormComponent extends Component {
 }
 
 export default FormComponent;
+
+/**
+ * <div className="container" id="Register">
+ <h1 className="well" style={{textAlign: 'center'}}>Interested? Let Maggy help you!</h1>
+ <div className="col-lg-12 well">
+ <div className="row">
+ <form id="formform" onSubmit={this.handleSubmit} >
+ <div className="col-sm-12">
+ <div className="row">
+ <div className="col-sm-6 form-group">
+ <label>Your Name</label>
+ <input className="form-control" name="fullName" value={this.state.fullName} onChange={this.handleInputChange} placeholder="Enter full name here.." type="text" pattern=".{4,}" required/>
+ </div>
+ <div className="col-sm-6 form-group">
+ <label>Your Email</label>
+ <input className="form-control" name="mail" value={this.state.mail} onChange={this.handleInputChange} placeholder="Enter Email here.." type="email" required/>
+ </div>
+ </div>
+ <button className="btn btn-lg formbutton-dev" type="submit">Yes, I am interested</button>
+ </div>
+ </form>
+ </div>
+ </div>
+ </div>
+ */
