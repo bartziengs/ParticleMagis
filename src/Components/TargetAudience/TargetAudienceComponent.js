@@ -12,16 +12,14 @@ class TargetAudienceComponent extends Component {
     render() {
         return (
             <div>
+                <div>
+                    <StepsComponent target={this.props.showDeveloper}/>
+                </div>
                 {(this.props.showDeveloper)
                     ?
-                    <div>
-                        <div>
-                            <StepsComponent />
-                        </div>
                         <div className="contenttext">
                             <DeveloperInformationComponent />
                         </div>
-                    </div>
                     :
                     <div>
                         <CompanyInformationComponent />
