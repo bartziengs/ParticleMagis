@@ -120,13 +120,13 @@ class FormComponent extends Component {
                     ?
                     <iframe id="devform"
                             src="https://docs.google.com/forms/d/e/1FAIpQLScWYTwvBQ1a-UuX2I7gT9SOUI1Uvgf7Uzea2SgjJQu8AAXxJA/viewform?embedded=true"
-                            width="100%" height="600" scrolling="no" frameborder="0" marginheight="0"
-                            marginwidth="0">Loading...</iframe>
-
+                            width="100%" height="600" scrolling="no" frameborder="0" 
+                            marginheight="0" marginwidth="0">Loading...</iframe>
                     :
                     <iframe id="compform"
                             src="https://docs.google.com/forms/d/e/1FAIpQLSc2aHtcYGJmRweOplaa8bg_aSTgFx5je_pTW097oUZ7IH6Ddw/viewform?embedded=true"
-                            width="100%" height="600" scrolling="no" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+                            width="100%" height="600" scrolling="no" frameborder="0" 
+                            marginheight="0" marginwidth="0">Loading...</iframe>
                 }</div>
         </section>
 

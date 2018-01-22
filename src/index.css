@@ -224,18 +224,18 @@ section {
 
 #formdiv {
   width: 100%;
-  height: 600px;
+  height: 700px;
   overflow: hidden;
   position: relative; }
 
 #devform {
   position: absolute;
-  top: -200px;
+  top: -150px;
   height: 1200px; }
 
 #compform {
   position: absolute;
-  top: -200px;
+  top: -150px;
   height: 1200px; }
 
 .ReactModal__Content h2 {
