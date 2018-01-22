@@ -10,7 +10,7 @@
 
 @media (max-width: 800px) {
   .flexcontainer img {
-    max-width: 70%; } }
+    max-width: 100%; } }
 
 @media (min-width: 1200px) {
   .flexcontainer img {
