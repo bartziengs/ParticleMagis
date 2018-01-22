@@ -70,7 +70,10 @@ class HomeComponent extends Component {
                     <div className="jumbotron">
                         <div className="box">
                         <div className="flexcontainer">
-                        <img alt="magisco-logo" className="img img-responsive" src={require('../../images/Maggy.png')}></img>
+                            <div className="row">
+                                <h1>Hi! It's Maggy from Magisco!</h1>
+                                <img alt="magisco-logo" className="img img-responsive" src={require('../../images/Maggy.png')}></img>
+                            </div>
                         </div>
                             {(this.state.showDeveloper) 
                             ? 
