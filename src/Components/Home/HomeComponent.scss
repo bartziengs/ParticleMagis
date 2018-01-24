@@ -1,3 +1,4 @@
+.headerrow{
 .flexcontainer {
     display: flex;
     justify-content: center;
@@ -9,17 +10,22 @@
         max-width: 50%;
     }
 }
+}
 
 @media(max-width: 800px){
+    .headerrow{
     .flexcontainer img{
         max-width: 100%;
+    }
     }
 }
 
 @media(min-width: 1200px){
+    .headerrow{
     .flexcontainer img{
         max-width:600px;
     }
+}
     .jumbotron{
         padding-top: 5%;
     }
