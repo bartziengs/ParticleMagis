@@ -70,7 +70,7 @@ class HomeComponent extends Component {
                     <div className="jumbotron">
                         <div className="box">
                         <div className="flexcontainer">
-                            <div className="row">
+                            <div className="row headerrow">
                                 <h1>Hi! It's Maggy from Magisco!</h1>
                                 <img alt="magisco-logo" className="img img-responsive" src={require('../../images/Maggy.png')}></img>
                             </div>

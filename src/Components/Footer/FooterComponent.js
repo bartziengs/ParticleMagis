@@ -49,11 +49,10 @@ class FooterComponent extends Component {
             <footer className="footer" id="foot">
                 <div className="container footer footer-text">
                     <div className="footermodal">
-                        <p className="col-xs-2 text-center footer-text"><span className="align-middle" onClick={this.showPrivacy}>Privacy Policy</span></p>
-                        <p className="col-xs-2 text-center footer-text"><span onClick={this.showTerms}>Terms of Service</span></p>
-                        <p className="col-xs-4 text-center footer-text"><span></span></p>
-                        <p className="col-xs-2 text-center footer-text"><span></span>© Magisco</p>
-                        <p className="col-xs-2 text-center footer-text"><span></span>info@magisco.nl</p>
+                        <p className="col-lg-2 col-md-3 col-xs-6 text-center footer-text"><span onClick={this.showPrivacy}>Privacy Policy</span></p>
+                        <p className="col-lg-2 col-md-3 col-xs-6 text-center footer-text"><span onClick={this.showTerms}>Terms of Service</span></p>
+                        <p className="col-lg-2 col-md-3 col-lg-offset-4 col-xs-6 col-lg-pull-right text-center footer-text">© Magisco</p>
+                        <p className="col-lg-2 col-md-3 col-xs-6 col-lg-pull-right text-center footer-text">info@magisco.nl</p>
                         <Modal
                             isOpen={this.state.modalIsOpen}
                             style={modalResources.customStyles}

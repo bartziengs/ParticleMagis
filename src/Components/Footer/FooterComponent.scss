@@ -24,3 +24,12 @@
         cursor: pointer;
     }
 }
+
+@media(max-width: 992px){
+    .footer{
+        height: 90px;
+    }
+    .footer-text{
+        font-size: 12px;
+    }
+}
