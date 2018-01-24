@@ -32,14 +32,14 @@ class HomeComponent extends Component {
     //  * @returns {*}
     //  */
     handleArrows = () => {
-        if(this.state.showDeveloper) {
+        if (this.state.showDeveloper) {
             return (
                 <div>
                     <div className="arrow arrow-first"></div>
                     <div className="arrow arrow-second"></div>
                 </div>
             );
-        } else return(<div></div>)
+        } else return (<div></div>)
     }
 
     /**
@@ -60,8 +60,8 @@ class HomeComponent extends Component {
     render() {
         return (
             <div>
-                <div className="particles">
-                    <ParticleComponent />
+                <div className="background">
+                    {/* <ParticleComponent /> */}
                     <div className="knoppen pull-right">
                         <div className="logo col-lg-2 col-xs-4 col-md-3 pull-left"><img alt="magisco-logo" className="img img-responsive" src={require('../../images/Magisco logo-3/PNG/logo-white-transparent.png')}></img></div>
                         <a className={!this.state.showDeveloper ? 'button pull-right buttonselected' : 'button pull-right'} onClick={this.pickCompany}><h3>Company</h3></a>
@@ -69,39 +69,38 @@ class HomeComponent extends Component {
                     </div>
                     <div className="jumbotron">
                         <div className="box">
-                        <div className="flexcontainer">
+
                             <div className="row headerrow">
                                 <h1>Hi! It's Maggy from Magisco!</h1>
-                                <img alt="magisco-logo" className="img img-responsive" src={require('../../images/Maggy.png')}></img>
-                            </div>
-                        </div>
-                            {(this.state.showDeveloper) 
-                            ? 
-                            <div className="DeveloperUSP">
-                                <div className="container contenttext col-lg-8 col-lg-offset-2 text-center">
-                                    <h3>Are you a junior-developer? Are you frustrated by recruiters? Let me take care of you!</h3>
-                                    <button className="btn btn-lg formbutton-comp" onClick={() => {Smoothscroll.scrollTo("steps")}}>How it works</button>
-                                    <button className="btn btn-lg formbutton-dev" onClick={() => {Smoothscroll.scrollTo("foot")}}>Yes, I am Interested!</button>
+                                <div className="flexcontainer">
+                                    <img alt="magisco-logo" className="img img-responsive" src={require('../../images/Maggy.png')}></img>
                                 </div>
-                            </div>                              
-                            :
-                            <div className="CompanyUSP">
-                                <div className="container contenttext col-lg-12 text-center">
-                                    <h3>Are you part of a company? Are you looking for talent that fits in your team? Let me take care of you! </h3>
-                                    <button className="btn btn-lg formbutton-comp" onClick={() => {Smoothscroll.scrollTo("steps")}}>How it works</button>
-                                    <button className="btn btn-lg formbutton-dev" onClick={() => {Smoothscroll.scrollTo("foot")}}>Yes, I am Interested!</button>
-                                </div>                                                     
-                            </div>                
+                            </div>
+                            {(this.state.showDeveloper)
+                                ?
+                                <div className="DeveloperUSP">
+                                    <div className="container contenttext col-lg-8 col-lg-offset-2 text-center">
+                                        <h3>Are you a junior-developer? Are you frustrated by recruiters? Let me take care of you!</h3>
+                                        <button className="btn btn-lg formbutton-comp" onClick={() => { Smoothscroll.scrollTo("steps") }}>How it works</button>
+                                        <button className="btn btn-lg formbutton-dev" onClick={() => { Smoothscroll.scrollTo("foot") }}>Yes, I am Interested!</button>
+                                    </div>
+                                </div>
+                                :
+                                <div className="CompanyUSP">
+                                    <div className="container contenttext col-lg-12 text-center">
+                                        <h3>Are you part of a company? Are you looking for talent that fits in your team? Let me take care of you! </h3>
+                                        <button className="btn btn-lg formbutton-comp" onClick={() => { Smoothscroll.scrollTo("steps") }}>How it works</button>
+                                        <button className="btn btn-lg formbutton-dev" onClick={() => { Smoothscroll.scrollTo("foot") }}>Yes, I am Interested!</button>
+                                    </div>
+                                </div>
                             }
                         </div>
                     </div>
-                    <div className="row">
-                            <div className="arrow arrow-first"></div>
-                            <div className="arrow arrow-second"></div>
-                    </div>
+                    <div className="arrow arrow-first"></div>
+                    <div className="arrow arrow-second"></div>
                 </div>
-                <TargetAudienceComponent showDeveloper={this.state.showDeveloper}/>
-                <FooterComponent/>
+                <TargetAudienceComponent showDeveloper={this.state.showDeveloper} />
+                <FooterComponent />
             </div>
         );
     }

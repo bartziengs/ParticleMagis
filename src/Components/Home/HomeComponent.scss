@@ -27,8 +27,42 @@
 
 .jumbotron {
     background: lightblue url("../../images/9.png") no-repeat fixed center center; 
+    height: 100%;
+}
+
+.background { 
+    height: 100vh;
+}
+
+@media(min-width: 1200px){
+    .background{
+    min-height: 820px;
+    }
+}
+
+@media(max-width: 450px){
+    .background{
+    min-height: 750px;
+    }
+}
+
+@media screen and (min-device-width: 500px) and (max-device-width: 900px) and (orientation : landscape){
+    .background{
+        min-height: 250vh;
+    }
 }
 
 .headerrow{
     margin: 0 0 0 0 !important; 
+}
+.DeveloperUSP{
+.container {
+    padding-top: 0;
+}
+} 
+
+.CompanyUSP{
+    .container {
+        padding-top: 0;
+    }
 }
