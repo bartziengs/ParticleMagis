@@ -716,8 +716,8 @@ Magisco by sending an e-mail to    <a href="mailto:info@linqu.io">info@magisco.n
         },
         content: {
             position: 'absolute',
-            width: '60%',
-            left: '20%',
+            width: '90%',
+            left: '5%',
             top: '40px',
             bottom: '40px',
             border: '2px solid #ccc',
