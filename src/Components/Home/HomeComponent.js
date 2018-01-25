@@ -4,6 +4,9 @@ import TargetAudienceComponent from '../TargetAudience/TargetAudienceComponent';
 import FooterComponent from '../Footer/FooterComponent';
 import Smoothscroll from '../../SmoothScroll';
 import './HomeComponent.css';
+import {modalResources} from "../Resources/modal-resources";
+import Modal from 'react-modal';
+import LogRes from '../Profile/LoginRegister';
 /**
  * @author Bart Ziengs, 1-12-17
  * This is the main component, rendering the particle background and 
@@ -21,10 +24,33 @@ class HomeComponent extends Component {
         super(props);
         this.state = {
             showDeveloper: true,
+            modalIsOpen: false,
+            Login: true,
         }
 
         this.pickDeveloper = this.pickDeveloper.bind(this);
         this.pickCompany = this.pickCompany.bind(this);
+        this.openModal = this.openModal.bind(this);
+        this.closeModal = this.closeModal.bind(this);
+        this.openLogin = this.openLogin.bind(this);
+        this.openSignup = this.openSignup.bind(this);
+    }
+
+    openModal = () => {
+        this.setState({modalIsOpen: true});
+    }
+
+    closeModal = () => {
+        this.setState({ modalIsOpen: false });
+    }
+
+    openLogin = () => {
+        this.setState({ Login: true});
+        this.openModal();
+    }
+    openSignup = () => {
+        this.setState({ Login: false});
+        this.openModal();
     }
 
     // /**
@@ -74,9 +100,20 @@ class HomeComponent extends Component {
                     {/* <ParticleComponent /> */}
                     <div className="knoppen pull-right">
                         <div className="logo col-lg-2 col-xs-4 col-md-3 pull-left"><img alt="magisco-logo" className="img img-responsive" src={require('../../images/Magisco logo-3/PNG/logo-white-transparent.png')}></img></div>
+                        <a className="button pull-right" onClick={this.openSignup}><h3>Sign up</h3></a>
+                        <a className="button pull-right" onClick={this.openLogin}><h3>Log in</h3></a>
                         <a className={!this.state.showDeveloper ? 'button pull-right buttonselected' : 'button pull-right'} onClick={this.pickCompany}><h3>Company</h3></a>
                         <a className={this.state.showDeveloper ? 'button pull-right buttonselected' : 'button pull-right'} onClick={this.pickDeveloper}><h3>Developer</h3></a>
                     </div>
+                    <Modal
+                        isOpen={this.state.modalIsOpen}
+                        style={modalResources.customStyles2}
+                        onRequestClose={this.closeModal}
+                        contentLabel="LoginPage"
+                    >
+                        <i class="fa fa-times pull-right" id="exitarrow" onClick={this.closeModal}></i>
+                        <LogRes showDev={this.state.showDeveloper} login={this.state.Login}/>
+                    </Modal>
                     <div className="jumbotron" id="jumbotronMaggie">
                         <div className="box" id="maggieBox">
 

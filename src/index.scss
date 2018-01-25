@@ -93,7 +93,7 @@ section{
     cursor:pointer;
     overflow: hidden;
     outline:none;
-    padding: 0px 20px 0px 20px;
+    padding: 0px 20px;
 }
 
 .button:hover{
@@ -117,12 +117,30 @@ font-family: 'Advent Pro', sans-serif;
   padding: 5em 20px 0 0;
 }
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 640px) {
  .knoppen{
     padding-top: 5px;
   }
-}
 
+  .button {
+    padding: 0 10px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .button {
+    padding: 0 5px;
+  }
+}
+@media screen and (max-width: 385px) {
+  .button {
+    padding: 0 2px;
+  }
+}
+@media screen and (max-width: 350px) {
+  .button h3 {
+    font-size: 14px;
+  }
+}
 .contenttext{
   color: #fff;
   height: 100%;

@@ -728,5 +728,29 @@ Magisco by sending an e-mail to    <a href="mailto:info@linqu.io">info@magisco.n
             outline: 'none',
             padding: '20px'
         }
+    },
+    customStyles2: {
+        overlay: {
+            position: 'fixed',
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            backgroundColor: 'rgba(255, 255, 255, 0.40)'
+        },
+        content: {
+            position: 'absolute',
+            width: '40%',
+            left: '30%',
+            top: '40px',
+            bottom: '35%',
+            border: '2px solid #ccc',
+            background: '#fff',
+            overflow: 'auto',
+            WebkitOverflowScrolling: 'touch',
+            borderRadius: '8px',
+            outline: 'none',
+            padding: '20px'
+        }
     }
 }

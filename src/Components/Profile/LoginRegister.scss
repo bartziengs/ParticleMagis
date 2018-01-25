@@ -1,0 +1,91 @@
+.login-container{
+  position: relative;
+  left: 22%;
+}
+
+#login-img {
+  width: 50%;
+  position: relative;
+  left: -1%;
+}
+.social-btn {
+  position: relative;
+  left: 10%;
+  width: 35%;
+  min-width: 200px;
+  padding: 0;
+  margin: 5px 0;
+  -webkit-border-radius: 5;
+  -moz-border-radius: 5;
+  border-radius: 5;
+  border-width: 1;
+  -webkit-box-shadow: 1px 1px 3px #000000;
+  -moz-box-shadow: 1px 1px 3px #000000;
+  box-shadow: 1px 1px 3px #000000;
+  text-decoration: none;
+  color:white;
+  display: block;
+}
+.social-btn:hover {
+  color: gainsboro;
+}
+.facebook-btn {
+  background: #3b5998;
+
+}
+.facebook-btn:hover {
+  background: #293e69;
+
+}
+.google-btn {
+  background: #cb3f22;
+}
+.google-btn:hover {
+  background: #a5331c;
+}
+.linkedin-btn {
+  background: rgb(26, 129, 185);
+}
+.linkedin-btn:hover {
+  background: rgb(7, 112, 169);
+}
+#login-form {
+  position: relative;
+  left: 4%;
+}
+.login-div {
+  text-align: center;
+}
+.login-text {
+  position: relative;
+  right: 22.5%;
+}
+.switch-text {
+  position: relative;
+  top: 1em;
+  cursor: pointer;
+}
+.switch-logreg {
+  position: relative;
+  top: 12em;
+  text-align: center;
+  left: -23%;
+  cursor: pointer;
+}
+.switch-reglog {
+  position: relative;
+  text-align: center;
+  left: -23%;
+  top: 20em;
+  cursor: pointer;
+}
+#exitarrow {
+  position: relative;
+  z-index: 2;
+}
+
+@media screen and (max-width: 350px) {
+  .login-text {
+    font-size: 24px;
+  }
+}
