@@ -54,6 +54,16 @@ class HomeComponent extends Component {
     }
 
     /**
+     * TO BE IMPLEMENTED SHORTLY!! DON'T REMOVE!
+     */
+
+    // componentDidMount() {
+    //     let height = document.getElementById('maggieBox').clientHeight;
+    //     let margin = window.getComputedStyle(document.getElementById('jumbotronMaggie')).getPropertyValue("padding-top");
+    //     alert(margin);
+    // }
+    
+    /**
      * Renders the particleJs background and all the content 
      * from DeveloperComponent and CompanyComponent, respectively
      */
@@ -67,8 +77,8 @@ class HomeComponent extends Component {
                         <a className={!this.state.showDeveloper ? 'button pull-right buttonselected' : 'button pull-right'} onClick={this.pickCompany}><h3>Company</h3></a>
                         <a className={this.state.showDeveloper ? 'button pull-right buttonselected' : 'button pull-right'} onClick={this.pickDeveloper}><h3>Developer</h3></a>
                     </div>
-                    <div className="jumbotron">
-                        <div className="box">
+                    <div className="jumbotron" id="jumbotronMaggie">
+                        <div className="box" id="maggieBox">
 
                             <div className="row headerrow">
                                 <h1>Hi! It's Maggy from Magisco!</h1>
