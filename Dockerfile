@@ -18,4 +18,4 @@ RUN npm install
 COPY . .
 
 # start app
-CMD ["npm", "start", "--disable-host-check"]
+CMD ["npm", "start", "--host 0.0.0.0", "--disable-host-check"]
