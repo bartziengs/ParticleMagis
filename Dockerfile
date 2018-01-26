@@ -6,7 +6,7 @@
 FROM node:alpine
 
 # open ports (multiple because experimental)
-EXPOSE 5000
+EXPOSE 3000
 
 # set a working directory
 WORKDIR app
@@ -17,7 +17,5 @@ RUN npm install
 
 COPY . .
 
-RUN npm run build
-
 # start app
-CMD ["node", "server.js"]
+CMD ["npm", "start"]
