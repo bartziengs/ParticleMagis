@@ -3,7 +3,7 @@ export const modalResources = {
         `<h2>
         <strong>Privacy Notice of the website</strong>
         <strong><u> </u></strong>
-        <strong><u>http://magisco.nl</u></strong>
+        <strong><u><a href="www.magisco.nl">http://magisco.nl</a></u></strong>
         <strong>(THE PRIVACY POLICY)</strong>
     </h2>
     <p>

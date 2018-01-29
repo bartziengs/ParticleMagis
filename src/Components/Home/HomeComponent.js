@@ -53,15 +53,6 @@ class HomeComponent extends Component {
         this.setState({ showDeveloper: false });
     }
 
-    /**
-     * TO BE IMPLEMENTED SHORTLY!! DON'T REMOVE!
-     */
-
-    // componentDidMount() {
-    //     let height = document.getElementById('maggieBox').clientHeight;
-    //     let margin = window.getComputedStyle(document.getElementById('jumbotronMaggie')).getPropertyValue("padding-top");
-    //     alert(margin);
-    // }
     
     /**
      * Renders the particleJs background and all the content 
